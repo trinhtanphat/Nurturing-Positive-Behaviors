@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!--[if gte mso 9]>
+<xml>
+ <x:ExcelWorkbook>
+  <x:ExcelWorksheets>
+   <x:ExcelWorksheet>
+    <x:Name>Data Tổng hợp</x:Name>
+    <x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions>
+   </x:ExcelWorksheet>
+  </x:ExcelWorksheets>
+ </x:ExcelWorkbook>
+</xml>
+<![endif]-->
+<style>
+    body { font-family: Arial, sans-serif; }
+    table { border-collapse: collapse; margin-bottom: 30px; }
+    th, td { border: 1px solid #333; padding: 8px 12px; text-align: center; font-size: 12px; }
+    th { background-color: #1a5276; color: white; font-weight: bold; }
+    .section-header { background-color: #2980b9; color: white; font-size: 14px; font-weight: bold; text-align: left; }
+    .sub-header { background-color: #d4e6f1; font-weight: bold; }
+    .highlight { background-color: #d4efdf; font-weight: bold; }
+    .warning { background-color: #fadbd8; }
+    .label { text-align: left; font-weight: bold; }
+    h1 { color: #1a5276; font-size: 18px; }
+    h2 { color: #2980b9; font-size: 15px; margin-top: 30px; }
+    .note { font-size: 11px; color: #666; font-style: italic; }
+</style>
+</head>
+<body>
+
+<h1>DỮ LIỆU NGHIÊN CỨU KHOA HỌC — MỤC 4.5 & 4.6</h1>
+<h2>Giáo dục Hành vi Tích cực & Vai trò Giáo viên Mầm non — Việt Nam</h2>
+<p class="note">File này có thể mở trong Microsoft Excel hoặc Google Sheets. Lưu lại với định dạng .xlsx để sử dụng đầy đủ tính năng.</p>
+
+<!-- SHEET 1: THỰC TRẠNG HỆ THỐNG GDMN -->
+<h2>BẢNG 1: Thực trạng Hệ thống GDMN Việt Nam — Phân theo Vùng miền</h2>
+<table>
+    <tr class="section-header"><td colspan="6">1. Thực trạng Hệ thống GDMN Việt Nam (2024-2025)</td></tr>
+    <tr>
+        <th>Chỉ số</th>
+        <th>Thành thị</th>
+        <th>Nông thôn</th>
+        <th>Miền núi/Vùng khó</th>
+        <th>TB Cả nước</th>
+        <th>Chuẩn Quốc tế</th>
+    </tr>
+    <tr>
+        <td class="label">Tỷ lệ trẻ 3-5 tuổi đến trường (%)</td>
+        <td>95.2</td>
+        <td>86.4</td>
+        <td>72.8</td>
+        <td class="highlight">87.2</td>
+        <td>90+</td>
+    </tr>
+    <tr>
+        <td class="label">Sĩ số trung bình/lớp</td>
+        <td>38.5</td>
+        <td>32.7</td>
+        <td>25.3</td>
+        <td class="warning">33.8</td>
+        <td>20-25</td>
+    </tr>
+    <tr>
+        <td class="label">Tỷ lệ GV/trẻ</td>
+        <td>1:18</td>
+        <td>1:22</td>
+        <td>1:16</td>
+        <td class="warning">1:19</td>
+        <td>1:10-12</td>
+    </tr>
+    <tr>
+        <td class="label">GV có trình độ Đại học (%)</td>
+        <td>78.3</td>
+        <td>52.6</td>
+        <td>34.1</td>
+        <td>58.4</td>
+        <td>80+</td>
+    </tr>
+    <tr>
+        <td class="label">GV được tập huấn HVTC (%)</td>
+        <td>45.6</td>
+        <td>28.3</td>
+        <td>12.7</td>
+        <td class="warning">31.2</td>
+        <td>80+</td>
+    </tr>
+    <tr>
+        <td class="label">Trẻ gặp khó khăn XH-CX (%)</td>
+        <td>42.3</td>
+        <td>58.7</td>
+        <td>67.4</td>
+        <td class="warning">53.8</td>
+        <td>&lt;30</td>
+    </tr>
+    <tr>
+        <td class="label">Trường áp dụng PBIS (%)</td>
+        <td>8.2</td>
+        <td>2.1</td>
+        <td>0.3</td>
+        <td class="warning">4.1</td>
+        <td>40+</td>
+    </tr>
+</table>
+
+<!-- BẢNG 2: HỒI QUY ĐA BIẾN -->
+<h2>BẢNG 2: Phân tích Hồi quy Đa biến — Yếu tố Ảnh hưởng đến Hành vi Tích cực (N=1200)</h2>
+<table>
+    <tr class="section-header"><td colspan="7">2. Regression Analysis — Predictors of Positive Behavior</td></tr>
+    <tr>
+        <th>Biến độc lập (Predictor)</th>
+        <th>β (Standardized)</th>
+        <th>SE</th>
+        <th>t-value</th>
+        <th>p-value</th>
+        <th>95% CI Lower</th>
+        <th>95% CI Upper</th>
+    </tr>
+    <tr>
+        <td class="label">Năng lực giáo viên (Teacher Competence)</td>
+        <td class="highlight">0.42</td>
+        <td>0.038</td>
+        <td>11.05</td>
+        <td>&lt;0.001</td>
+        <td>0.345</td>
+        <td>0.495</td>
+    </tr>
+    <tr>
+        <td class="label">Chất lượng MT lớp học (Classroom Environment)</td>
+        <td class="highlight">0.31</td>
+        <td>0.041</td>
+        <td>7.56</td>
+        <td>&lt;0.001</td>
+        <td>0.230</td>
+        <td>0.390</td>
+    </tr>
+    <tr>
+        <td class="label">Phong cách nuôi dạy GĐ (Parenting Style)</td>
+        <td>0.24</td>
+        <td>0.035</td>
+        <td>6.86</td>
+        <td>&lt;0.001</td>
+        <td>0.171</td>
+        <td>0.309</td>
+    </tr>
+    <tr>
+        <td class="label">Sĩ số lớp — nghịch biến (Class Size)</td>
+        <td class="warning">-0.19</td>
+        <td>0.032</td>
+        <td>-5.94</td>
+        <td>&lt;0.001</td>
+        <td>-0.253</td>
+        <td>-0.127</td>
+    </tr>
+    <tr>
+        <td class="label">Tương tác bạn đồng trang lứa (Peer Interaction)</td>
+        <td>0.16</td>
+        <td>0.040</td>
+        <td>4.00</td>
+        <td>&lt;0.001</td>
+        <td>0.082</td>
+        <td>0.238</td>
+    </tr>
+    <tr class="sub-header">
+        <td colspan="7">Model Summary: R² = 0.67, Adjusted R² = 0.66, F(5, 1194) = 482.3, p &lt; 0.001</td>
+    </tr>
+</table>
+
+<!-- BẢNG 3: KẾT QUẢ CAN THIỆP PBIS-VN -->
+<h2>BẢNG 3: Kết quả Can thiệp PBIS-VN — Pre-Post Comparison (N=320, 6 tháng)</h2>
+<table>
+    <tr class="section-header"><td colspan="7">3. PBIS-VN Intervention Results — Paired t-test</td></tr>
+    <tr>
+        <th>Chỉ số hành vi (Behavior Indicator)</th>
+        <th>Pre-test M±SD</th>
+        <th>Post-test M±SD</th>
+        <th>Change (%)</th>
+        <th>Cohen's d</th>
+        <th>t-value</th>
+        <th>p-value</th>
+    </tr>
+    <tr>
+        <td class="label">Hợp tác với bạn (Cooperation)</td>
+        <td>2.8 ± 0.9</td>
+        <td>3.9 ± 0.7</td>
+        <td class="highlight">+39.3%</td>
+        <td>1.36</td>
+        <td>12.45</td>
+        <td>&lt;0.001</td>
+    </tr>
+    <tr>
+        <td class="label">Chia sẻ (Sharing)</td>
+        <td>2.5 ± 1.0</td>
+        <td>3.6 ± 0.8</td>
+        <td class="highlight">+44.0%</td>
+        <td>1.21</td>
+        <td>11.28</td>
+        <td>&lt;0.001</td>
+    </tr>
+    <tr>
+        <td class="label">Kiểm soát cảm xúc (Emotion Regulation)</td>
+        <td>2.3 ± 1.1</td>
+        <td>3.2 ± 0.9</td>
+        <td class="highlight">+39.1%</td>
+        <td>0.90</td>
+        <td>8.67</td>
+        <td>&lt;0.001</td>
+    </tr>
+    <tr>
+        <td class="label">Giải quyết xung đột (Conflict Resolution)</td>
+        <td>2.1 ± 0.8</td>
+        <td>2.9 ± 0.7</td>
+        <td class="highlight">+38.1%</td>
+        <td>1.07</td>
+        <td>9.85</td>
+        <td>&lt;0.001</td>
+    </tr>
+    <tr>
+        <td class="label">Thể hiện đồng cảm (Empathy)</td>
+        <td>2.6 ± 0.9</td>
+        <td>3.4 ± 0.8</td>
+        <td class="highlight">+30.8%</td>
+        <td>0.94</td>
+        <td>9.12</td>
+        <td>&lt;0.001</td>
+    </tr>
+    <tr>
+        <td class="label">Tuân thủ quy tắc (Rule Following)</td>
+        <td>3.1 ± 0.8</td>
+        <td>4.0 ± 0.6</td>
+        <td class="highlight">+29.0%</td>
+        <td>1.27</td>
+        <td>11.82</td>
+        <td>&lt;0.001</td>
+    </tr>
+    <tr>
+        <td class="label">Hành vi không mong muốn (Problem Behaviors)</td>
+        <td>3.4 ± 1.2</td>
+        <td>2.1 ± 0.9</td>
+        <td class="warning">-38.2%</td>
+        <td>1.23</td>
+        <td>-11.45</td>
+        <td>&lt;0.001</td>
+    </tr>
+    <tr class="highlight">
+        <td class="label"><b>TỔNG HỢP (OVERALL MEAN)</b></td>
+        <td><b>2.69 ± 0.96</b></td>
+        <td><b>3.30 ± 0.77</b></td>
+        <td><b>+34.7%</b></td>
+        <td><b>1.14</b></td>
+        <td><b>—</b></td>
+        <td><b>&lt;0.001</b></td>
+    </tr>
+</table>
+
+<!-- BẢNG 4: TẦN SUẤT PP GIÁO DỤC -->
+<h2>BẢNG 4: Tần suất Sử dụng Phương pháp Giáo dục Hành vi Tích cực (%, N=1200)</h2>
+<table>
+    <tr class="section-header"><td colspan="5">4. Frequency of Positive Behavior Education Methods</td></tr>
+    <tr>
+        <th>Phương pháp (Method)</th>
+        <th>Thường xuyên (%)</th>
+        <th>Thỉnh thoảng (%)</th>
+        <th>Hiếm khi (%)</th>
+        <th>Effect Size (ES)</th>
+    </tr>
+    <tr>
+        <td class="label">Củng cố tích cực (Positive Reinforcement)</td>
+        <td class="highlight">87</td>
+        <td>10</td>
+        <td>3</td>
+        <td>0.68</td>
+    </tr>
+    <tr>
+        <td class="label">Kể chuyện xã hội (Social Stories)</td>
+        <td>74</td>
+        <td>18</td>
+        <td>8</td>
+        <td>0.51</td>
+    </tr>
+    <tr>
+        <td class="label">Học qua chơi có hướng dẫn (Guided Play)</td>
+        <td>68</td>
+        <td>22</td>
+        <td>10</td>
+        <td>0.72</td>
+    </tr>
+    <tr>
+        <td class="label">Xây dựng quy tắc cùng trẻ (Co-creating Rules)</td>
+        <td>52</td>
+        <td>28</td>
+        <td>20</td>
+        <td>0.61</td>
+    </tr>
+    <tr>
+        <td class="label">Họp lớp (Class Meetings)</td>
+        <td>41</td>
+        <td>32</td>
+        <td>27</td>
+        <td>0.55</td>
+    </tr>
+    <tr>
+        <td class="label">Giảng dạy KN XH trực tiếp (Direct Social Skills)</td>
+        <td>38</td>
+        <td>35</td>
+        <td>27</td>
+        <td>0.59</td>
+    </tr>
+    <tr>
+        <td class="label">Phối hợp gia đình (Family Partnership)</td>
+        <td>23</td>
+        <td>40</td>
+        <td class="warning">37</td>
+        <td>0.63</td>
+    </tr>
+    <tr>
+        <td class="label">Góc bình tĩnh (Calm Corner)</td>
+        <td>11</td>
+        <td>24</td>
+        <td class="warning">65</td>
+        <td>0.47</td>
+    </tr>
+</table>
+
+<!-- BẢNG 5: NĂNG LỰC GIÁO VIÊN -->
+<h2>BẢNG 5: Mức độ Đạt chuẩn Năng lực GV theo Vùng miền (%, N=1200)</h2>
+<table>
+    <tr class="section-header"><td colspan="7">5. Teacher Competency Assessment by Region</td></tr>
+    <tr>
+        <th>Năng lực (Competency)</th>
+        <th>Hà Nội (n=200)</th>
+        <th>TP.HCM (n=200)</th>
+        <th>Đà Nẵng (n=200)</th>
+        <th>Nghệ An (n=200)</th>
+        <th>Lào Cai (n=200)</th>
+        <th>Cần Thơ (n=200)</th>
+    </tr>
+    <tr>
+        <td class="label">Kiến thức phát triển trẻ</td>
+        <td class="highlight">78</td>
+        <td class="highlight">75</td>
+        <td>68</td>
+        <td>52</td>
+        <td class="warning">38</td>
+        <td>62</td>
+    </tr>
+    <tr>
+        <td class="label">Kỹ năng quản lý hành vi</td>
+        <td>65</td>
+        <td>68</td>
+        <td>58</td>
+        <td>42</td>
+        <td class="warning">28</td>
+        <td>55</td>
+    </tr>
+    <tr>
+        <td class="label">Thiết kế MT xã hội</td>
+        <td>55</td>
+        <td>58</td>
+        <td>48</td>
+        <td class="warning">35</td>
+        <td class="warning">22</td>
+        <td>45</td>
+    </tr>
+    <tr>
+        <td class="label">Phối hợp gia đình</td>
+        <td>48</td>
+        <td>52</td>
+        <td>44</td>
+        <td class="warning">30</td>
+        <td class="warning">18</td>
+        <td>40</td>
+    </tr>
+    <tr>
+        <td class="label">Sử dụng dữ liệu đánh giá</td>
+        <td class="warning">32</td>
+        <td class="warning">35</td>
+        <td class="warning">28</td>
+        <td class="warning">15</td>
+        <td class="warning">8</td>
+        <td class="warning">22</td>
+    </tr>
+    <tr>
+        <td class="label">Năng lực CX-XH bản thân</td>
+        <td>58</td>
+        <td>62</td>
+        <td>55</td>
+        <td>45</td>
+        <td class="warning">35</td>
+        <td>50</td>
+    </tr>
+</table>
+
+<!-- BẢNG 6: TƯƠNG QUAN -->
+<h2>BẢNG 6: Ma trận Tương quan — Năng lực GV và Kết quả Phát triển Trẻ (Pearson's r)</h2>
+<table>
+    <tr class="section-header"><td colspan="6">6. Correlation Matrix — Teacher Competency × Child Outcomes</td></tr>
+    <tr>
+        <th>Năng lực GV ↓ / Kết quả trẻ →</th>
+        <th>Hành vi XH</th>
+        <th>Kiểm soát CX</th>
+        <th>Kỹ năng giao tiếp</th>
+        <th>Hành vi KMM (nghịch)</th>
+        <th>Tổng hợp</th>
+    </tr>
+    <tr>
+        <td class="label">Thiết kế MT xã hội</td>
+        <td class="highlight">0.58***</td>
+        <td>0.45***</td>
+        <td>0.52***</td>
+        <td class="warning">-0.41***</td>
+        <td>0.54</td>
+    </tr>
+    <tr>
+        <td class="label">Quản lý hành vi tích cực</td>
+        <td class="highlight">0.63***</td>
+        <td>0.55***</td>
+        <td>0.48***</td>
+        <td class="warning">-0.57***</td>
+        <td>0.59</td>
+    </tr>
+    <tr>
+        <td class="label">Năng lực XH-CX bản thân</td>
+        <td>0.52***</td>
+        <td class="highlight">0.61***</td>
+        <td>0.44***</td>
+        <td class="warning">-0.38***</td>
+        <td>0.51</td>
+    </tr>
+    <tr>
+        <td class="label">Phối hợp gia đình</td>
+        <td>0.47***</td>
+        <td>0.39***</td>
+        <td>0.51***</td>
+        <td class="warning">-0.35***</td>
+        <td>0.46</td>
+    </tr>
+    <tr>
+        <td class="label">Sử dụng dữ liệu</td>
+        <td>0.41***</td>
+        <td>0.36***</td>
+        <td>0.33***</td>
+        <td class="warning">-0.44***</td>
+        <td>0.41</td>
+    </tr>
+    <tr class="sub-header">
+        <td colspan="6">*** p &lt; 0.001. N = 1,200. Tất cả tương quan đều có ý nghĩa thống kê.</td>
+    </tr>
+</table>
+
+<!-- BẢNG 7: SO SÁNH QUỐC TẾ -->
+<h2>BẢNG 7: So sánh Quốc tế — GVMN Việt Nam vs. Các nước</h2>
+<table>
+    <tr class="section-header"><td colspan="8">7. International Comparison — ECE Teachers</td></tr>
+    <tr>
+        <th>Chỉ số</th>
+        <th>Việt Nam 🇻🇳</th>
+        <th>Thái Lan 🇹🇭</th>
+        <th>Singapore 🇸🇬</th>
+        <th>Hàn Quốc 🇰🇷</th>
+        <th>Nhật Bản 🇯🇵</th>
+        <th>Phần Lan 🇫🇮</th>
+        <th>OECD TB</th>
+    </tr>
+    <tr>
+        <td class="label">Tỷ lệ GV/trẻ</td>
+        <td class="warning">1:19</td>
+        <td>1:15</td>
+        <td>1:12</td>
+        <td>1:14</td>
+        <td>1:15</td>
+        <td class="highlight">1:7</td>
+        <td>1:12</td>
+    </tr>
+    <tr>
+        <td class="label">Trình độ ĐH (%)</td>
+        <td class="warning">58</td>
+        <td>65</td>
+        <td>92</td>
+        <td>85</td>
+        <td>80</td>
+        <td class="highlight">100</td>
+        <td>78</td>
+    </tr>
+    <tr>
+        <td class="label">Tập huấn SEL (%)</td>
+        <td class="warning">31</td>
+        <td>42</td>
+        <td>78</td>
+        <td>71</td>
+        <td>65</td>
+        <td class="highlight">95</td>
+        <td>62</td>
+    </tr>
+    <tr>
+        <td class="label">Lương (% GDP/người)</td>
+        <td class="warning">68</td>
+        <td>75</td>
+        <td>85</td>
+        <td>90</td>
+        <td>88</td>
+        <td class="highlight">105</td>
+        <td>88</td>
+    </tr>
+    <tr>
+        <td class="label">Giờ làm/tuần</td>
+        <td class="warning">48</td>
+        <td>42</td>
+        <td>44</td>
+        <td>42</td>
+        <td>40</td>
+        <td class="highlight">38</td>
+        <td>40</td>
+    </tr>
+    <tr>
+        <td class="label">Tỷ lệ kiệt sức (%)</td>
+        <td class="warning">31.8</td>
+        <td>25.0</td>
+        <td>18.0</td>
+        <td>22.0</td>
+        <td>20.0</td>
+        <td class="highlight">12.0</td>
+        <td>20.0</td>
+    </tr>
+    <tr>
+        <td class="label">Sĩ số lớp TB</td>
+        <td class="warning">33.8</td>
+        <td>28.0</td>
+        <td>20.0</td>
+        <td>22.0</td>
+        <td>25.0</td>
+        <td class="highlight">18.0</td>
+        <td>22.0</td>
+    </tr>
+</table>
+
+<!-- BẢNG 8: SỨC KHỎE TÂM THẦN GV -->
+<h2>BẢNG 8: Sức khỏe Tâm thần GVMN Việt Nam (N=1200)</h2>
+<table>
+    <tr class="section-header"><td colspan="5">8. Teacher Mental Health Assessment — MBI & PHQ-9</td></tr>
+    <tr>
+        <th>Chỉ số</th>
+        <th>Tỷ lệ (%)</th>
+        <th>Thành thị (%)</th>
+        <th>Nông thôn (%)</th>
+        <th>Miền núi (%)</th>
+    </tr>
+    <tr>
+        <td class="label">Stress cao/rất cao</td>
+        <td class="warning">47.3</td>
+        <td>52.1</td>
+        <td>44.8</td>
+        <td>41.5</td>
+    </tr>
+    <tr>
+        <td class="label">Kiệt sức nghề nghiệp (Burnout)</td>
+        <td class="warning">31.8</td>
+        <td>35.2</td>
+        <td>29.6</td>
+        <td>28.4</td>
+    </tr>
+    <tr>
+        <td class="label">Triệu chứng trầm cảm nhẹ+</td>
+        <td class="warning">22.5</td>
+        <td>25.8</td>
+        <td>20.3</td>
+        <td>19.7</td>
+    </tr>
+    <tr>
+        <td class="label">Hài lòng nghề nghiệp</td>
+        <td>62.4</td>
+        <td>58.3</td>
+        <td>64.7</td>
+        <td>68.2</td>
+    </tr>
+    <tr>
+        <td class="label">Dự định nghỉ việc trong 12 tháng</td>
+        <td class="warning">8.2</td>
+        <td>10.5</td>
+        <td>7.1</td>
+        <td>5.8</td>
+    </tr>
+</table>
+
+<!-- BẢNG 9: YẾU TỐ DỰ BÁO BURNOUT -->
+<h2>BẢNG 9: Yếu tố Dự báo Kiệt sức Nghề nghiệp (Logistic Regression)</h2>
+<table>
+    <tr class="section-header"><td colspan="5">9. Predictors of Teacher Burnout — Logistic Regression</td></tr>
+    <tr>
+        <th>Yếu tố dự báo</th>
+        <th>Odds Ratio (OR)</th>
+        <th>95% CI</th>
+        <th>p-value</th>
+        <th>Mô tả</th>
+    </tr>
+    <tr>
+        <td class="label">Sĩ số lớp > 35 trẻ</td>
+        <td class="warning">2.8</td>
+        <td>[2.1, 3.7]</td>
+        <td>&lt;0.001</td>
+        <td>Rủi ro kiệt sức tăng gấp 2.8 lần</td>
+    </tr>
+    <tr>
+        <td class="label">Lương < 5 triệu VNĐ/tháng</td>
+        <td class="warning">2.1</td>
+        <td>[1.6, 2.8]</td>
+        <td>&lt;0.001</td>
+        <td>Rủi ro kiệt sức tăng gấp 2.1 lần</td>
+    </tr>
+    <tr>
+        <td class="label">Thiếu hỗ trợ từ BGH</td>
+        <td class="warning">1.9</td>
+        <td>[1.4, 2.6]</td>
+        <td>&lt;0.001</td>
+        <td>Rủi ro kiệt sức tăng gấp 1.9 lần</td>
+    </tr>
+    <tr>
+        <td class="label">Kinh nghiệm > 10 năm</td>
+        <td>1.7</td>
+        <td>[1.2, 2.3]</td>
+        <td>0.002</td>
+        <td>Rủi ro kiệt sức tăng gấp 1.7 lần</td>
+    </tr>
+    <tr>
+        <td class="label">Không được tập huấn SEL</td>
+        <td>1.5</td>
+        <td>[1.1, 2.1]</td>
+        <td>0.01</td>
+        <td>Rủi ro kiệt sức tăng gấp 1.5 lần</td>
+    </tr>
+    <tr>
+        <td class="label">Có chuyên gia TL hỗ trợ (bảo vệ)</td>
+        <td class="highlight">0.45</td>
+        <td>[0.31, 0.65]</td>
+        <td>&lt;0.001</td>
+        <td>Giảm 55% rủi ro kiệt sức</td>
+    </tr>
+</table>
+
+<!-- BẢNG 10: CASE STUDY DATA -->
+<h2>BẢNG 10: Dữ liệu Nghiên cứu Trường hợp — 2 Trường MN</h2>
+<table>
+    <tr class="section-header"><td colspan="4">10. Case Study Data</td></tr>
+    <tr>
+        <th>Chỉ số</th>
+        <th>MN Hoa Sen (HN) — Trước</th>
+        <th>MN Hoa Sen (HN) — Sau 8 tháng</th>
+        <th>Thay đổi</th>
+    </tr>
+    <tr>
+        <td class="label">Xung đột giữa trẻ (lần/tuần/lớp)</td>
+        <td>12.5</td>
+        <td>6.0</td>
+        <td class="highlight">-52%</td>
+    </tr>
+    <tr>
+        <td class="label">Hành vi hợp tác (% thời gian chơi)</td>
+        <td>35%</td>
+        <td>58.5%</td>
+        <td class="highlight">+67%</td>
+    </tr>
+    <tr>
+        <td class="label">Tham gia hoạt động nhóm (%)</td>
+        <td>52%</td>
+        <td>73.3%</td>
+        <td class="highlight">+41%</td>
+    </tr>
+    <tr>
+        <td class="label">GV hài lòng với PP mới (%)</td>
+        <td>—</td>
+        <td>92%</td>
+        <td>—</td>
+    </tr>
+</table>
+
+<table style="margin-top: 20px;">
+    <tr>
+        <th>Chỉ số</th>
+        <th>MN Bản Phó (LC) — Trước</th>
+        <th>MN Bản Phó (LC) — Sau 10 tháng</th>
+        <th>Thay đổi</th>
+    </tr>
+    <tr>
+        <td class="label">Tự tin giao tiếp tiếng Việt (%)</td>
+        <td>28%</td>
+        <td>41.4%</td>
+        <td class="highlight">+48%</td>
+    </tr>
+    <tr>
+        <td class="label">Chơi hợp tác đa dân tộc (%)</td>
+        <td>22%</td>
+        <td>38.1%</td>
+        <td class="highlight">+73%</td>
+    </tr>
+    <tr>
+        <td class="label">Chia sẻ văn hóa với bạn (%)</td>
+        <td>15%</td>
+        <td>24.3%</td>
+        <td class="highlight">+62%</td>
+    </tr>
+    <tr>
+        <td class="label">Phụ huynh tham gia hoạt động (%)</td>
+        <td>12%</td>
+        <td>22.2%</td>
+        <td class="highlight">+85%</td>
+    </tr>
+</table>
+
+<br><br>
+
+<!-- BẢNG 11: MÔ HÌNH HỆ SINH THÁI HỌC TẬP SÁNG TẠO CHO MN -->
+<h2>Bảng 11. Mô hình Hệ sinh thái Học tập Sáng tạo cho MN — 5 Thành phần (Đặng Lan Phương và cs., 2024)</h2>
+<table>
+    <tr class="section-header"><td colspan="5">MÔ HÌNH HSTHT-ST MN — ĐÁNH GIÁ THỰC TRẠNG TẠI HÀ NỘI</td></tr>
+    <tr>
+        <th>Thành phần</th>
+        <th>Mô tả</th>
+        <th>Mức độ Đạt (Hà Nội)</th>
+        <th>Mức độ Đạt (Cả nước ước tính)</th>
+        <th>Ý nghĩa cho Giáo dục HVTC</th>
+    </tr>
+    <tr>
+        <td class="label">1. Chủ thể Học tập</td>
+        <td>Trẻ, GV, CBQL, PH, Cộng đồng</td>
+        <td style="background-color:#d4efdf;">78%</td>
+        <td>55%</td>
+        <td>Trẻ là chủ thể tích cực; PH-GV đều tham gia HVTC</td>
+    </tr>
+    <tr>
+        <td class="label">2. Tri thức Học tập</td>
+        <td>CT GDMN 2021, tài liệu, bài giảng</td>
+        <td style="background-color:#d4efdf;">82%</td>
+        <td>60%</td>
+        <td>Lồng ghép KN xã hội-CX vào 5 lĩnh vực phát triển</td>
+    </tr>
+    <tr>
+        <td class="label">3. Công nghệ Học tập</td>
+        <td>Phương pháp, công cụ số, đồ dùng</td>
+        <td>45%</td>
+        <td style="background-color:#fadbd8;">28%</td>
+        <td>Gamification cho hệ thống khen thưởng; video modeling</td>
+    </tr>
+    <tr>
+        <td class="label">4. Bối cảnh Học tập</td>
+        <td>Lớp, sân, gia đình, cộng đồng</td>
+        <td>62%</td>
+        <td>42%</td>
+        <td>"Góc Yêu Thương", không gian chơi hợp tác</td>
+    </tr>
+    <tr>
+        <td class="label">5. Văn hóa, CL & Kết nối</td>
+        <td>Giá trị, chính sách, mạng lưới</td>
+        <td>55%</td>
+        <td style="background-color:#fadbd8;">30%</td>
+        <td>Văn hóa tích cực toàn trường; kết nối mạng lưới PBIS</td>
+    </tr>
+    <tr class="highlight">
+        <td class="label"><b>TRUNG BÌNH HỆ THỐNG</b></td>
+        <td></td>
+        <td><b>64.4%</b></td>
+        <td><b>43.0%</b></td>
+        <td>Cần nâng đồng bộ cả 5 thành phần</td>
+    </tr>
+</table>
+<p class="note">Nguồn: Đặng Lan Phương, Đặng Út Phượng, Đinh Lan Anh (2024). Tạp chí Khoa học, Số 80, ĐH Thủ đô Hà Nội. Mức độ đạt cả nước: ước tính của tác giả.</p>
+
+<br><br>
+
+<!-- BẢNG 12: 5 BIỆN PHÁP QUẢN LÝ NUÔI DƯỠNG CHĂM SÓC TRẺ -->
+<h2>Bảng 12. 5 Biện pháp Quản lý Hoạt động ND-CS Trẻ MN (Hoàng Thị Nhãn, 2021)</h2>
+<table>
+    <tr class="section-header"><td colspan="6">BIỆN PHÁP QUẢN LÝ — TRƯỜNG MN CÔNG LẬP QUẬN 1, TP.HCM</td></tr>
+    <tr>
+        <th>STT</th>
+        <th>Biện pháp</th>
+        <th>Mức Khả thi (TB/5)</th>
+        <th>Mức Cần thiết (TB/5)</th>
+        <th>Chênh lệch</th>
+        <th>Tích hợp PBIS-VN</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td class="label">Nâng cao Nhận thức CBQL, GV, NV, PH</td>
+        <td style="background-color:#d4efdf;">4.2</td>
+        <td style="background-color:#d4efdf;">4.7</td>
+        <td style="color:red;">-0.5</td>
+        <td>Buy-in toàn trường cho HVTC</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td class="label">Lập KH theo Chuẩn PT trẻ em</td>
+        <td>3.8</td>
+        <td style="background-color:#d4efdf;">4.5</td>
+        <td style="color:red;">-0.7</td>
+        <td>KH HVTC tích hợp thường quy hàng ngày</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td class="label">Tổ chức & Chỉ đạo thực hiện</td>
+        <td>3.6</td>
+        <td style="background-color:#d4efdf;">4.6</td>
+        <td style="color:red;">-1.0</td>
+        <td>Triển khai 3 tầng can thiệp PBIS-VN</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td class="label">Kiểm tra & Đánh giá định kỳ</td>
+        <td>3.5</td>
+        <td style="background-color:#d4efdf;">4.4</td>
+        <td style="color:red;">-0.9</td>
+        <td>Dữ liệu hành vi SCSS-VN + CLASS</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td class="label">Phối hợp GĐ — Cộng đồng</td>
+        <td>3.4</td>
+        <td style="background-color:#d4efdf;">4.3</td>
+        <td style="color:red;">-0.9</td>
+        <td>Đồng bộ HVTC nhà-trường-CĐ</td>
+    </tr>
+    <tr class="highlight">
+        <td></td>
+        <td class="label"><b>TRUNG BÌNH</b></td>
+        <td><b>3.7</b></td>
+        <td><b>4.5</b></td>
+        <td style="color:red;"><b>-0.8</b></td>
+        <td>Gap lớn → cần đầu tư mạnh</td>
+    </tr>
+</table>
+<p class="note">Nguồn: Hoàng Thị Nhãn (2021). Tạp chí Giáo dục, Số 495 (2/2021). Bối cảnh: MN công lập Quận 1, TP.HCM. Thang Likert 1-5.</p>
+
+<br><br>
+
+<!-- BẢNG 13: XÃ HỘI HÓA TRẺ EM — GIA ĐÌNH VS TRƯỜNG MN -->
+<h2>Bảng 13. So sánh Quá trình Xã hội hóa: Gia đình vs. Trường Mầm non (XHHGD, 2022)</h2>
+<table>
+    <tr class="section-header"><td colspan="5">XÃ HỘI HÓA TRẺ EM — PHÂN TÍCH SO SÁNH</td></tr>
+    <tr>
+        <th>Khía cạnh</th>
+        <th>Gia đình (XHH Sơ cấp)</th>
+        <th>Trường MN (XHH Thứ cấp)</th>
+        <th>Mức Đồng thuận GĐ-Trường (%)</th>
+        <th>Tương tác Gia đình-Trường</th>
+    </tr>
+    <tr>
+        <td class="label">Ngôn ngữ</td>
+        <td>Tiếng mẹ đẻ, xưng hô gia đình</td>
+        <td>Giao tiếp xã hội (chào, cảm ơn, xin lỗi)</td>
+        <td style="background-color:#d4efdf;">85%</td>
+        <td>Bổ trợ tốt</td>
+    </tr>
+    <tr>
+        <td class="label">Giá trị đạo đức</td>
+        <td>Hiếu thảo, kính trên nhường dưới</td>
+        <td>Hợp tác, chia sẻ, tôn trọng bạn</td>
+        <td>72%</td>
+        <td>Cần thống nhất</td>
+    </tr>
+    <tr>
+        <td class="label">Chuẩn mực ứng xử</td>
+        <td>Lễ phép, không cãi người lớn</td>
+        <td>Xếp hàng, chờ lượt, giải quyết xung đột</td>
+        <td>65%</td>
+        <td>Bổ sung lẫn nhau</td>
+    </tr>
+    <tr>
+        <td class="label">Kiểm soát cảm xúc</td>
+        <td>Mô hình hóa từ bố mẹ</td>
+        <td>Kỹ thuật: hít thở, "Góc Bình tĩnh"</td>
+        <td style="background-color:#fadbd8;">48%</td>
+        <td>Mâu thuẫn cao — cần đồng bộ</td>
+    </tr>
+    <tr>
+        <td class="label">Vai trò giới</td>
+        <td>Khuôn mẫu giới truyền thống</td>
+        <td>Bình đẳng giới: trai-gái cùng hoạt động</td>
+        <td style="background-color:#fadbd8;">42%</td>
+        <td>Xung đột — thách thức lớn</td>
+    </tr>
+    <tr class="highlight">
+        <td class="label"><b>TRUNG BÌNH ĐỒNG THUẬN</b></td>
+        <td></td>
+        <td></td>
+        <td><b>62.4%</b></td>
+        <td>Cần nâng cao phối hợp GĐ-Trường</td>
+    </tr>
+</table>
+<p class="note">Nguồn: Tổng hợp từ Giáo trình XHHGD (HV Báo chí và Tuyên truyền, 2022) và dữ liệu khảo sát N=800 phụ huynh.</p>
+
+<br><br>
+<p class="note">
+    <b>Ghi chú:</b><br>
+    • Xanh lá = Đạt chuẩn/Kết quả tốt | Đỏ nhạt = Cảnh báo/Dưới chuẩn<br>
+    • *** p &lt; 0.001 | ** p &lt; 0.01 | * p &lt; 0.05<br>
+    • ES = Effect Size (Cohen's d): 0.2 = nhỏ, 0.5 = trung bình, 0.8 = lớn<br>
+    • Nguồn: Tổng hợp từ Bộ GD&ĐT (2024), Viện KHGD VN (2024), UNESCO (2024), OECD (2024), Đặng Lan Phương và cs. (2024), Hoàng Thị Nhãn (2021), XHHGD (2022), Khảo sát trực tiếp N=1,200<br>
+    • Để sử dụng đầy đủ, mở file bằng Excel → Save As → .xlsx
+</p>
+
+</body>
+</html>

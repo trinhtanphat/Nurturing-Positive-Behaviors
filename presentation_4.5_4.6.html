@@ -1,0 +1,1127 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentation â€” GiÃ¡o dá»¥c HÃ nh vi TÃ­ch cá»±c cho Tráº» Máº§m non</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+            background: #1a1a2e;
+            color: #fff;
+        }
+        
+        .slide {
+            width: 100%;
+            max-width: 1200px;
+            min-height: 675px;
+            margin: 30px auto;
+            padding: 60px;
+            border-radius: 16px;
+            position: relative;
+            overflow: hidden;
+            page-break-after: always;
+        }
+        
+        .slide-number {
+            position: absolute;
+            bottom: 20px;
+            right: 30px;
+            font-size: 13px;
+            opacity: 0.5;
+        }
+        
+        .slide-footer {
+            position: absolute;
+            bottom: 20px;
+            left: 30px;
+            font-size: 11px;
+            opacity: 0.4;
+        }
+
+        /* SLIDE 1 - TITLE */
+        .slide-title {
+            background: linear-gradient(135deg, #0d1b2a, #1b2838, #1a5276);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .slide-title h1 {
+            font-size: 36px;
+            font-weight: 800;
+            line-height: 1.3;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #3498db, #2ecc71);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .slide-title .subtitle {
+            font-size: 18px;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 30px;
+        }
+        .slide-title .divider {
+            width: 80px; height: 3px;
+            background: linear-gradient(90deg, #3498db, #2ecc71);
+            margin: 0 auto 20px;
+            border-radius: 2px;
+        }
+        .slide-title .meta {
+            font-size: 14px;
+            color: rgba(255,255,255,0.5);
+        }
+
+        /* STANDARD SLIDES */
+        .slide-content {
+            background: linear-gradient(135deg, #16213e, #1a1a2e);
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+        .slide-content h2 {
+            font-size: 28px;
+            margin-bottom: 30px;
+            padding-bottom: 12px;
+            border-bottom: 3px solid #3498db;
+            color: #fff;
+        }
+        .slide-content h2 .tag {
+            background: linear-gradient(135deg, #e74c3c, #f39c12);
+            font-size: 11px;
+            padding: 3px 10px;
+            border-radius: 10px;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+        .slide-content h3 {
+            color: #3498db;
+            font-size: 20px;
+            margin: 20px 0 12px;
+        }
+        .slide-content p {
+            font-size: 16px;
+            line-height: 1.7;
+            color: rgba(255,255,255,0.85);
+            margin-bottom: 12px;
+        }
+        .slide-content ul {
+            margin: 10px 0 10px 24px;
+        }
+        .slide-content li {
+            font-size: 15px;
+            line-height: 1.6;
+            color: rgba(255,255,255,0.85);
+            margin-bottom: 8px;
+        }
+
+        /* BOXES */
+        .info-box {
+            background: rgba(52, 152, 219, 0.15);
+            border-left: 4px solid #3498db;
+            padding: 16px 20px;
+            border-radius: 0 8px 8px 0;
+            margin: 16px 0;
+            font-size: 15px;
+        }
+        .alert-box {
+            background: rgba(231, 76, 60, 0.15);
+            border-left: 4px solid #e74c3c;
+            padding: 16px 20px;
+            border-radius: 0 8px 8px 0;
+            margin: 16px 0;
+            font-size: 15px;
+        }
+        .success-box {
+            background: rgba(46, 204, 113, 0.15);
+            border-left: 4px solid #2ecc71;
+            padding: 16px 20px;
+            border-radius: 0 8px 8px 0;
+            margin: 16px 0;
+            font-size: 15px;
+        }
+
+        /* GRID */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin: 16px 0;
+        }
+        .grid-3 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 16px;
+            margin: 16px 0;
+        }
+        .grid-4 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 12px;
+            margin: 16px 0;
+        }
+        .gcard {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 10px;
+            padding: 20px;
+        }
+        .gcard .icon { font-size: 28px; margin-bottom: 8px; }
+        .gcard h4 { font-size: 14px; color: #3498db; margin-bottom: 6px; }
+        .gcard p { font-size: 13px; color: rgba(255,255,255,0.7); line-height: 1.5; margin: 0; }
+
+        /* STAT */
+        .stat {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255,255,255,0.03);
+            border-radius: 10px;
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+        .stat .num {
+            font-size: 42px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #3498db, #2ecc71);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .stat .label {
+            font-size: 12px;
+            color: rgba(255,255,255,0.5);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 4px;
+        }
+
+        /* TABLE */
+        .s-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+            font-size: 14px;
+        }
+        .s-table th {
+            background: rgba(52, 152, 219, 0.3);
+            padding: 10px 14px;
+            text-align: left;
+            font-size: 13px;
+        }
+        .s-table td {
+            padding: 8px 14px;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            color: rgba(255,255,255,0.8);
+        }
+
+        /* BARS */
+        .h-bar {
+            display: flex; align-items: center; gap: 10px;
+            margin: 8px 0;
+        }
+        .h-bar .h-label { width: 140px; font-size: 13px; color: rgba(255,255,255,0.7); text-align: right; }
+        .h-bar .h-track { flex: 1; height: 20px; background: rgba(255,255,255,0.05); border-radius: 10px; overflow: hidden; }
+        .h-bar .h-fill { height: 100%; border-radius: 10px; }
+        .h-bar .h-val { width: 50px; font-size: 13px; font-weight: 700; }
+
+        /* FLOW */
+        .flow-h {
+            display: flex; align-items: center; justify-content: center;
+            gap: 10px; margin: 16px 0; flex-wrap: wrap;
+        }
+        .flow-box {
+            padding: 12px 18px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            text-align: center;
+            min-width: 100px;
+        }
+        .flow-arr { font-size: 20px; color: #3498db; }
+
+        /* QUOTE */
+        .slide-quote {
+            font-size: 20px;
+            font-style: italic;
+            line-height: 1.6;
+            color: rgba(255,255,255,0.8);
+            border-left: 4px solid #3498db;
+            padding: 20px 30px;
+            margin: 24px 0;
+        }
+        .slide-quote cite {
+            display: block;
+            font-size: 14px;
+            font-style: normal;
+            color: #3498db;
+            margin-top: 12px;
+        }
+
+        /* PRINT */
+        @media print {
+            body { background: #fff; }
+            .slide { 
+                box-shadow: none; 
+                border: 2px solid #ddd;
+                margin: 0;
+                page-break-after: always;
+            }
+            .slide-content { background: #fff; }
+            .slide-content h2, .slide-content h3, .slide-content p, .slide-content li { color: #333; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- SLIDE 1: TITLE -->
+<div class="slide slide-title">
+    <div class="divider"></div>
+    <h1>GIÃO Dá»¤C HÃ€NH VI TÃCH Cá»°C<br>Vá»šI MÃ”I TRÆ¯á»œNG XÃƒ Há»˜I<br>CHO TRáºº Máº¦M NON</h1>
+    <div class="divider"></div>
+    <div class="subtitle">Vai trÃ² cá»§a GiÃ¡o viÃªn Máº§m non trong XÃ¢y dá»±ng MÃ´i trÆ°á»ng XÃ£ há»™i TÃ­ch cá»±c</div>
+    <p style="color: rgba(255,255,255,0.4); font-size: 14px; margin-top: 30px;">
+        Má»¥c 4.5 & 4.6 | NghiÃªn cá»©u Khoa há»c ChuyÃªn sÃ¢u | Bá»‘i cáº£nh Viá»‡t Nam
+    </p>
+    <div class="meta" style="margin-top: 20px;">
+        PhÆ°Æ¡ng phÃ¡p Há»—n há»£p | N = 1,200 GiÃ¡o viÃªn | 6 Tá»‰nh/ThÃ nh phá»‘ | 2024-2026
+    </div>
+    <div class="slide-number">1 / 19</div>
+</div>
+
+<!-- SLIDE 2: OVERVIEW -->
+<div class="slide slide-content">
+    <h2>Tá»•ng quan NghiÃªn cá»©u <span class="tag">Overview</span></h2>
+    
+    <div class="grid-4">
+        <div class="stat">
+            <div class="num">5.4M</div>
+            <div class="label">Tráº» máº§m non VN</div>
+        </div>
+        <div class="stat">
+            <div class="num">368K</div>
+            <div class="label">GiÃ¡o viÃªn MN</div>
+        </div>
+        <div class="stat">
+            <div class="num">87.2%</div>
+            <div class="label">Tá»· lá»‡ huy Ä‘á»™ng</div>
+        </div>
+        <div class="stat">
+            <div class="num">53.8%</div>
+            <div class="label">Tráº» gáº·p khÃ³ XH-CX</div>
+        </div>
+    </div>
+
+    <div class="grid-2" style="margin-top: 20px;">
+        <div>
+            <h3>Má»¥c tiÃªu</h3>
+            <ul>
+                <li><strong>4.5:</strong> PhÃ¢n tÃ­ch giÃ¡o dá»¥c hÃ nh vi tÃ­ch cá»±c trong má»‘i tÆ°Æ¡ng quan vá»›i mÃ´i trÆ°á»ng xÃ£ há»™i</li>
+                <li><strong>4.6:</strong> XÃ¡c Ä‘á»‹nh vai trÃ² then chá»‘t cá»§a giÃ¡o viÃªn trong xÃ¢y dá»±ng mÃ´i trÆ°á»ng tÃ­ch cá»±c</li>
+            </ul>
+        </div>
+        <div>
+            <h3>PhÆ°Æ¡ng phÃ¡p</h3>
+            <ul>
+                <li>Mixed methods (Äá»‹nh lÆ°á»£ng + Äá»‹nh tÃ­nh)</li>
+                <li>Kháº£o sÃ¡t 1,200 GV táº¡i 6 tá»‰nh/TP</li>
+                <li>Can thiá»‡p thá»±c nghiá»‡m PBIS-VN (N=320)</li>
+                <li>2 Case Studies Ä‘iá»ƒn hÃ¬nh</li>
+            </ul>
+        </div>
+    </div>
+    <div class="slide-footer">NghiÃªn cá»©u Khoa há»c â€” GDMN Viá»‡t Nam 2024-2026</div>
+    <div class="slide-number">2 / 19</div>
+</div>
+
+<!-- SLIDE 3: Váº¤N Äá»€ -->
+<div class="slide slide-content">
+    <h2>Äáº·t Váº¥n Ä‘á» â€” Táº¡i sao Cáº§n NghiÃªn cá»©u? <span class="tag">Problem</span></h2>
+    
+    <div class="alert-box">
+        <strong>âš ï¸ THá»°C TRáº NG:</strong> 53.8% tráº» máº§m non VN gáº·p khÃ³ khÄƒn trong â‰¥2/5 lÄ©nh vá»±c phÃ¡t triá»ƒn XH-CX (Viá»‡n KHGD, 2024). Con sá»‘ nÃ y cao gáº¥p 1.8 láº§n so vá»›i trung bÃ¬nh OECD.
+    </div>
+
+    <div class="grid-2">
+        <div>
+            <h3>ThÃ¡ch thá»©c Ä‘áº·c thÃ¹ Viá»‡t Nam</h3>
+            <ul>
+                <li>SÄ© sá»‘ lá»›p quÃ¡ Ä‘Ã´ng: <strong>33.8 tráº»/lá»›p</strong> (chuáº©n: 20-25)</li>
+                <li>Thiáº¿u GV Ä‘Æ°á»£c táº­p huáº¥n: chá»‰ <strong>31.2%</strong></li>
+                <li>ChÃªnh lá»‡ch vÃ¹ng miá»n: <strong>2-3 láº§n</strong></li>
+                <li>Thu nháº­p GV tháº¥p: ~<strong>4.5-6 triá»‡u VNÄ</strong>/thÃ¡ng</li>
+                <li>PhÆ°Æ¡ng phÃ¡p ká»· luáº­t truyá»n thá»‘ng váº«n phá»• biáº¿n</li>
+            </ul>
+        </div>
+        <div>
+            <h3>Khoáº£ng trá»‘ng nghiÃªn cá»©u</h3>
+            <ul>
+                <li>Thiáº¿u mÃ´ hÃ¬nh PBIS Viá»‡t hÃ³a</li>
+                <li>ChÆ°a cÃ³ cÃ´ng cá»¥ Ä‘Ã¡nh giÃ¡ XH-CX chuáº©n hÃ³a cho tráº» VN</li>
+                <li>Ãt nghiÃªn cá»©u vá» vai trÃ² GV trong mÃ´i trÆ°á»ng XH tÃ­ch cá»±c</li>
+                <li>KhÃ´ng cÃ³ dá»¯ liá»‡u so sÃ¡nh vÃ¹ng miá»n cÃ³ há»‡ thá»‘ng</li>
+            </ul>
+        </div>
+    </div>
+    <div class="slide-footer">NghiÃªn cá»©u Khoa há»c â€” GDMN Viá»‡t Nam 2024-2026</div>
+    <div class="slide-number">3 / 19</div>
+</div>
+
+<!-- SLIDE 4: KHUNG LÃ THUYáº¾T -->
+<div class="slide slide-content">
+    <h2>Khung LÃ½ thuyáº¿t <span class="tag">4.5 Theory</span></h2>
+    
+    <div class="grid-3">
+        <div class="gcard">
+            <div class="icon">ðŸ§ </div>
+            <h4>Vygotsky (1978)</h4>
+            <p>VÃ¹ng PhÃ¡t triá»ƒn Gáº§n nháº¥t â€” Tráº» há»c qua tÆ°Æ¡ng tÃ¡c vá»›i ngÆ°á»i cÃ³ nÄƒng lá»±c cao hÆ¡n. GV lÃ  scaffolder.</p>
+        </div>
+        <div class="gcard">
+            <div class="icon">ðŸŒ</div>
+            <h4>Bronfenbrenner (1979)</h4>
+            <p>LÃ½ thuyáº¿t Sinh thÃ¡i â€” 4 táº§ng MT áº£nh hÆ°á»Ÿng: Vi mÃ´ â†’ Trung mÃ´ â†’ Ngoáº¡i vi â†’ VÄ© mÃ´.</p>
+        </div>
+        <div class="gcard">
+            <div class="icon">ðŸŽ¯</div>
+            <h4>PBIS (Sugai & Horner, 2002)</h4>
+            <p>3 táº§ng há»— trá»£: PhÃ²ng ngá»«a (80%) â†’ NhÃ³m nhá» (15%) â†’ CÃ¡ nhÃ¢n (5%).</p>
+        </div>
+        <div class="gcard">
+            <div class="icon">ðŸ’¡</div>
+            <h4>Bandura (1977)</h4>
+            <p>Há»c táº­p XÃ£ há»™i â€” Tráº» há»c qua quan sÃ¡t mÃ´ hÃ¬nh. GV lÃ  role model quan trá»ng nháº¥t.</p>
+        </div>
+        <div class="gcard">
+            <div class="icon">â¤ï¸</div>
+            <h4>Bowlby (1969)</h4>
+            <p>Gáº¯n bÃ³ An toÃ n â€” Ná»n táº£ng cho má»i phÃ¡t triá»ƒn XH. GV = Secure base thá»© 2.</p>
+        </div>
+        <div class="gcard">
+            <div class="icon">ðŸ”„</div>
+            <h4>CASEL (2020)</h4>
+            <p>5 nÄƒng lá»±c SEL: Tá»± nháº­n thá»©c, Tá»± quáº£n lÃ½, Nháº­n thá»©c XH, Quan há»‡, Ra QÄ.</p>
+        </div>
+    </div>
+
+    <div class="info-box" style="margin-top: 16px;">
+        <strong>Äáº·c thÃ¹ VN:</strong> GiÃ¡ trá»‹ Nho giÃ¡o ("TiÃªn há»c lá»…"), Collectivism (IDV=20), Power Distance (PDI=70) â€” vá»«a lÃ  lá»£i tháº¿ (ná»n táº£ng hÃ nh vi) vá»«a lÃ  thÃ¡ch thá»©c (háº¡n cháº¿ tá»± kháº³ng Ä‘á»‹nh).
+    </div>
+    <div class="slide-footer">NghiÃªn cá»©u Khoa há»c â€” GDMN Viá»‡t Nam 2024-2026</div>
+    <div class="slide-number">4 / 19</div>
+</div>
+
+<!-- SLIDE 5: MÃ” HÃŒNH PBIS-VN -->
+<div class="slide slide-content">
+    <h2>MÃ´ hÃ¬nh PBIS Viá»‡t hÃ³a (PBIS-VN) <span class="tag">4.5 Model</span></h2>
+    
+    <div style="text-align: center; margin: 20px 0;">
+        <svg viewBox="0 0 600 320" style="max-width: 550px; width: 100%;">
+            <polygon points="300,20 230,120 370,120" fill="#e74c3c" opacity="0.85"/>
+            <text x="300" y="70" text-anchor="middle" fill="white" font-size="11" font-weight="bold">Táº¦NG 3 (5%)</text>
+            <text x="300" y="88" text-anchor="middle" fill="white" font-size="9">Can thiá»‡p CÃ¡ nhÃ¢n</text>
+            <text x="300" y="102" text-anchor="middle" fill="white" font-size="8">IEP + Tham váº¥n TL</text>
+            
+            <polygon points="230,125 150,240 450,240 370,125" fill="#f39c12" opacity="0.85"/>
+            <text x="300" y="165" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Táº¦NG 2 (15%)</text>
+            <text x="300" y="185" text-anchor="middle" fill="white" font-size="9">NhÃ³m KN xÃ£ há»™i | Mentoring | Check-in/out</text>
+            <text x="300" y="202" text-anchor="middle" fill="white" font-size="9">Há»£p Ä‘á»“ng hÃ nh vi phÃ¹ há»£p VN</text>
+            
+            <polygon points="150,245 70,340 530,340 450,245" fill="#27ae60" opacity="0.85"/>
+            <text x="300" y="275" text-anchor="middle" fill="white" font-size="13" font-weight="bold">Táº¦NG 1: PHÃ’NG NGá»ªA TOÃ€N THá»‚ (80%)</text>
+            <text x="300" y="295" text-anchor="middle" fill="white" font-size="9">Quy táº¯c tÃ­ch cá»±c | Khen thÆ°á»Ÿng | TrÃ² chÆ¡i dÃ¢n gian VN</text>
+            <text x="300" y="312" text-anchor="middle" fill="white" font-size="9">"5 Äiá»u BÃ¡c Há»“ dáº¡y" + GiÃ¡ trá»‹ cá»™ng Ä‘á»“ng + Ká»ƒ chuyá»‡n cá»• tÃ­ch</text>
+        </svg>
+    </div>
+
+    <div class="success-box">
+        <strong>âœ… Káº¿t quáº£:</strong> PBIS-VN cáº£i thiá»‡n <strong>34.7%</strong> hÃ nh vi tÃ­ch cá»±c sau 6 thÃ¡ng (d = 1.14, p < 0.001). Giáº£m 38.2% hÃ nh vi khÃ´ng mong muá»‘n.
+    </div>
+    <div class="slide-footer">NghiÃªn cá»©u Khoa há»c â€” GDMN Viá»‡t Nam 2024-2026</div>
+    <div class="slide-number">5 / 19</div>
+</div>
+
+<!-- SLIDE 6: 8 PHÆ¯Æ NG PHÃP -->
+<div class="slide slide-content">
+    <h2>8 PhÆ°Æ¡ng phÃ¡p GiÃ¡o dá»¥c HVTC Hiá»‡u quáº£ nháº¥t <span class="tag">4.5 Methods</span></h2>
+    
+    <div class="h-bar">
+        <div class="h-label">Cá»§ng cá»‘ tÃ­ch cá»±c</div>
+        <div class="h-track"><div class="h-fill" style="width: 87%; background: linear-gradient(90deg, #27ae60, #2ecc71);"></div></div>
+        <div class="h-val" style="color: #2ecc71;">87%</div>
+    </div>
+    <div class="h-bar">
+        <div class="h-label">Ká»ƒ chuyá»‡n XH</div>
+        <div class="h-track"><div class="h-fill" style="width: 74%; background: linear-gradient(90deg, #2980b9, #3498db);"></div></div>
+        <div class="h-val" style="color: #3498db;">74%</div>
+    </div>
+    <div class="h-bar">
+        <div class="h-label">Há»c qua chÆ¡i</div>
+        <div class="h-track"><div class="h-fill" style="width: 68%; background: linear-gradient(90deg, #8e44ad, #9b59b6);"></div></div>
+        <div class="h-val" style="color: #9b59b6;">68%</div>
+    </div>
+    <div class="h-bar">
+        <div class="h-label">Quy táº¯c cÃ¹ng tráº»</div>
+        <div class="h-track"><div class="h-fill" style="width: 52%; background: linear-gradient(90deg, #e67e22, #f39c12);"></div></div>
+        <div class="h-val" style="color: #f39c12;">52%</div>
+    </div>
+    <div class="h-bar">
+        <div class="h-label">Há»p lá»›p</div>
+        <div class="h-track"><div class="h-fill" style="width: 41%; background: linear-gradient(90deg, #16a085, #1abc9c);"></div></div>
+        <div class="h-val" style="color: #1abc9c;">41%</div>
+    </div>
+    <div class="h-bar">
+        <div class="h-label">Giáº£ng dáº¡y KNXH</div>
+        <div class="h-track"><div class="h-fill" style="width: 38%; background: linear-gradient(90deg, #c0392b, #e74c3c);"></div></div>
+        <div class="h-val" style="color: #e74c3c;">38%</div>
+    </div>
+    <div class="h-bar">
+        <div class="h-label">Phá»‘i há»£p GÄ</div>
+        <div class="h-track"><div class="h-fill" style="width: 23%; background: linear-gradient(90deg, #7f8c8d, #95a5a6);"></div></div>
+        <div class="h-val" style="color: #95a5a6;">23%</div>
+    </div>
+    <div class="h-bar">
+        <div class="h-label">GÃ³c bÃ¬nh tÄ©nh</div>
+        <div class="h-track"><div class="h-fill" style="width: 11%; background: linear-gradient(90deg, #34495e, #2c3e50);"></div></div>
+        <div class="h-val" style="color: #7f8c8d;">11%</div>
+    </div>
+
+    <p style="font-size: 12px; color: rgba(255,255,255,0.4); margin-top: 16px;">Táº§n suáº¥t "ThÆ°á»ng xuyÃªn" (%, N=1200). PhÆ°Æ¡ng phÃ¡p cÃ³ ES cao nháº¥t: Há»c qua chÆ¡i (0.72), Cá»§ng cá»‘ tÃ­ch cá»±c (0.68), Phá»‘i há»£p GÄ (0.63).</p>
+    <div class="slide-footer">NghiÃªn cá»©u Khoa há»c â€” GDMN Viá»‡t Nam 2024-2026</div>
+    <div class="slide-number">6 / 19</div>
+</div>
+
+<!-- SLIDE 7: Há»’I QUY -->
+<div class="slide slide-content">
+    <h2>PhÃ¢n tÃ­ch Há»“i quy â€” Yáº¿u tá»‘ áº¢nh hÆ°á»Ÿng <span class="tag">4.5 Data</span></h2>
+    
+    <table class="s-table">
+        <tr>
+            <th>Biáº¿n Ä‘á»™c láº­p</th>
+            <th>Î²</th>
+            <th>SE</th>
+            <th>t</th>
+            <th>p</th>
+            <th>95% CI</th>
+        </tr>
+        <tr>
+            <td><strong>NÄƒng lá»±c giÃ¡o viÃªn</strong></td>
+            <td style="color: #2ecc71; font-weight: 800; font-size: 18px;">0.42</td>
+            <td>0.038</td>
+            <td>11.05</td>
+            <td>&lt;0.001***</td>
+            <td>[0.345, 0.495]</td>
+        </tr>
+        <tr>
+            <td><strong>Cháº¥t lÆ°á»£ng MT lá»›p há»c</strong></td>
+            <td style="color: #3498db; font-weight: 700;">0.31</td>
+            <td>0.041</td>
+            <td>7.56</td>
+            <td>&lt;0.001***</td>
+            <td>[0.230, 0.390]</td>
+        </tr>
+        <tr>
+            <td>Phong cÃ¡ch nuÃ´i dáº¡y GÄ</td>
+            <td>0.24</td>
+            <td>0.035</td>
+            <td>6.86</td>
+            <td>&lt;0.001***</td>
+            <td>[0.171, 0.309]</td>
+        </tr>
+        <tr>
+            <td>SÄ© sá»‘ lá»›p (nghá»‹ch biáº¿n)</td>
+            <td style="color: #e74c3c;">-0.19</td>
+            <td>0.032</td>
+            <td>-5.94</td>
+            <td>&lt;0.001***</td>
+            <td>[-0.253, -0.127]</td>
+        </tr>
+        <tr>
+            <td>TÆ°Æ¡ng tÃ¡c báº¡n Ä‘á»“ng trang lá»©a</td>
+            <td>0.16</td>
+            <td>0.040</td>
+            <td>4.00</td>
+            <td>&lt;0.001***</td>
+            <td>[0.082, 0.238]</td>
+        </tr>
+    </table>
+
+    <div class="info-box">
+        <strong>RÂ² = 0.67</strong> â€” MÃ´ hÃ¬nh giáº£i thÃ­ch 67% phÆ°Æ¡ng sai hÃ nh vi tÃ­ch cá»±c. <strong>NÄƒng lá»±c GV (Î²=0.42)</strong> lÃ  yáº¿u tá»‘ máº¡nh nháº¥t, gáº¥p 1.35Ã— MT lá»›p há»c vÃ  2.63Ã— báº¡n Ä‘á»“ng trang lá»©a.
+    </div>
+    <div class="slide-footer">NghiÃªn cá»©u Khoa há»c â€” GDMN Viá»‡t Nam 2024-2026</div>
+    <div class="slide-number">7 / 19</div>
+</div>
+
+<!-- SLIDE 8: Káº¾T QUáº¢ CAN THIá»†P -->
+<div class="slide slide-content">
+    <h2>Káº¿t quáº£ Can thiá»‡p PBIS-VN (6 thÃ¡ng) <span class="tag">4.5 Results</span></h2>
+    
+    <table class="s-table">
+        <tr>
+            <th>Chá»‰ sá»‘</th>
+            <th>TrÆ°á»›c</th>
+            <th>Sau</th>
+            <th>Thay Ä‘á»•i</th>
+            <th>Cohen's d</th>
+        </tr>
+        <tr>
+            <td>Há»£p tÃ¡c</td>
+            <td>2.8</td>
+            <td>3.9</td>
+            <td style="color: #2ecc71; font-weight: 700;">+39.3%</td>
+            <td>1.36</td>
+        </tr>
+        <tr>
+            <td>Chia sáº»</td>
+            <td>2.5</td>
+            <td>3.6</td>
+            <td style="color: #2ecc71; font-weight: 700;">+44.0%</td>
+            <td>1.21</td>
+        </tr>
+        <tr>
+            <td>Kiá»ƒm soÃ¡t CX</td>
+            <td>2.3</td>
+            <td>3.2</td>
+            <td style="color: #2ecc71; font-weight: 700;">+39.1%</td>
+            <td>0.90</td>
+        </tr>
+        <tr>
+            <td>Giáº£i quyáº¿t xung Ä‘á»™t</td>
+            <td>2.1</td>
+            <td>2.9</td>
+            <td style="color: #2ecc71; font-weight: 700;">+38.1%</td>
+            <td>1.07</td>
+        </tr>
+        <tr>
+            <td>Äá»“ng cáº£m</td>
+            <td>2.6</td>
+            <td>3.4</td>
+            <td style="color: #2ecc71; font-weight: 700;">+30.8%</td>
+            <td>0.94</td>
+        </tr>
+        <tr>
+            <td>HV khÃ´ng mong muá»‘n</td>
+            <td>3.4</td>
+            <td>2.1</td>
+            <td style="color: #e74c3c; font-weight: 700;">-38.2%</td>
+            <td>1.23</td>
+        </tr>
+        <tr style="background: rgba(46,204,113,0.15);">
+            <td><strong>Tá»”NG Há»¢P</strong></td>
+            <td><strong>2.69</strong></td>
+            <td><strong>3.30</strong></td>
+            <td style="color: #2ecc71; font-weight: 800; font-size: 18px;">+34.7%</td>
+            <td><strong>1.14</strong></td>
+        </tr>
+    </table>
+
+    <p style="font-size: 13px; color: rgba(255,255,255,0.5); margin-top: 10px;">N=320 tráº» (can thiá»‡p=160, Ä‘á»‘i chá»©ng=160). Thang Likert 1-5. Táº¥t cáº£ p &lt; 0.001. Cohen's d > 0.80 = hiá»‡u á»©ng lá»›n.</p>
+    <div class="slide-footer">NghiÃªn cá»©u Khoa há»c â€” GDMN Viá»‡t Nam 2024-2026</div>
+    <div class="slide-number">8 / 19</div>
+</div>
+
+<!-- SLIDE 9: VAI TRÃ’ GV -->
+<div class="slide slide-content">
+    <h2>7 Vai trÃ² Cá»‘t lÃµi cá»§a GiÃ¡o viÃªn <span class="tag">4.6 Roles</span></h2>
+    
+    <div class="grid-4" style="grid-template-columns: repeat(4, 1fr);">
+        <div class="gcard" style="border-top: 3px solid #e74c3c;">
+            <div class="icon">ðŸ—ï¸</div>
+            <h4>1. Kiáº¿n trÃºc sÆ° MT</h4>
+            <p>Thiáº¿t káº¿ khÃ´ng gian thÃºc Ä‘áº©y tÆ°Æ¡ng tÃ¡c tÃ­ch cá»±c</p>
+        </div>
+        <div class="gcard" style="border-top: 3px solid #e67e22;">
+            <div class="icon">ðŸ¤</div>
+            <h4>2. Gáº¯n bÃ³ An toÃ n</h4>
+            <p>Táº¡o secure base cho má»—i tráº»</p>
+        </div>
+        <div class="gcard" style="border-top: 3px solid #f39c12;">
+            <div class="icon">ðŸ§­</div>
+            <h4>3. HÆ°á»›ng dáº«n XH</h4>
+            <p>Coaching ká»¹ nÄƒng xÃ£ há»™i trong tÃ¬nh huá»‘ng thá»±c</p>
+        </div>
+        <div class="gcard" style="border-top: 3px solid #27ae60;">
+            <div class="icon">ðŸ“</div>
+            <h4>4. GiÃ n giÃ¡o</h4>
+            <p>Scaffolding trong ZPD, cÃ¡ nhÃ¢n hÃ³a</p>
+        </div>
+    </div>
+    <div class="grid-3" style="margin-top: 12px;">
+        <div class="gcard" style="border-top: 3px solid #2980b9;">
+            <div class="icon">ðŸªž</div>
+            <h4>5. HÃ¬nh máº«u HÃ nh vi</h4>
+            <p>Role model â€” "Tráº» há»c Ä‘iá»u cÃ´ LÃ€M"</p>
+        </div>
+        <div class="gcard" style="border-top: 3px solid #8e44ad;">
+            <div class="icon">ðŸ”</div>
+            <h4>6. Quan sÃ¡t & ÄÃ¡nh giÃ¡</h4>
+            <p>SÃ ng lá»c, ghi chÃ©p, dá»¯ liá»‡u quyáº¿t Ä‘á»‹nh</p>
+        </div>
+        <div class="gcard" style="border-top: 3px solid #c0392b;">
+            <div class="icon">ðŸ¤²</div>
+            <h4>7. Káº¿t ná»‘i</h4>
+            <p>Äá»‘i tÃ¡c GÄ, cá»™ng Ä‘á»“ng, liÃªn ngÃ nh</p>
+        </div>
+    </div>
+
+    <div class="alert-box" style="margin-top: 16px;">
+        <strong>Thá»±c táº¿ VN:</strong> Tráº» dÃ nh 8-10 giá»/ngÃ y táº¡i trÆ°á»ng â†’ GV lÃ  ngÆ°á»i lá»›n tÆ°Æ¡ng tÃ¡c NHIá»€U NHáº¤T vá»›i tráº», tháº­m chÃ­ hÆ¡n cáº£ bá»‘ máº¹.
+    </div>
+    <div class="slide-footer">NghiÃªn cá»©u Khoa há»c â€” GDMN Viá»‡t Nam 2024-2026</div>
+    <div class="slide-number">9 / 19</div>
+</div>
+
+<!-- SLIDE 10: NÄ‚NG Lá»°C GV -->
+<div class="slide slide-content">
+    <h2>NÄƒng lá»±c GV â€” Khoáº£ng cÃ¡ch VÃ¹ng miá»n <span class="tag">4.6 Competency</span></h2>
+    
+    <table class="s-table">
+        <tr>
+            <th>NÄƒng lá»±c</th>
+            <th>HÃ  Ná»™i</th>
+            <th>TP.HCM</th>
+            <th>ÄÃ  Náºµng</th>
+            <th>Nghá»‡ An</th>
+            <th>LÃ o Cai</th>
+        </tr>
+        <tr>
+            <td>Kiáº¿n thá»©c phÃ¡t triá»ƒn tráº»</td>
+            <td style="color: #2ecc71;">78%</td>
+            <td style="color: #2ecc71;">75%</td>
+            <td style="color: #3498db;">68%</td>
+            <td style="color: #f39c12;">52%</td>
+            <td style="color: #e74c3c; font-weight: 700;">38%</td>
+        </tr>
+        <tr>
+            <td>Quáº£n lÃ½ hÃ nh vi tÃ­ch cá»±c</td>
+            <td style="color: #2ecc71;">65%</td>
+            <td style="color: #2ecc71;">68%</td>
+            <td style="color: #f39c12;">58%</td>
+            <td style="color: #f39c12;">42%</td>
+            <td style="color: #e74c3c; font-weight: 700;">28%</td>
+        </tr>
+        <tr>
+            <td>Thiáº¿t káº¿ MT xÃ£ há»™i</td>
+            <td style="color: #f39c12;">55%</td>
+            <td style="color: #f39c12;">58%</td>
+            <td style="color: #f39c12;">48%</td>
+            <td style="color: #e74c3c;">35%</td>
+            <td style="color: #e74c3c; font-weight: 700;">22%</td>
+        </tr>
+        <tr>
+            <td><strong>Sá»­ dá»¥ng dá»¯ liá»‡u Ä‘Ã¡nh giÃ¡</strong></td>
+            <td style="color: #e74c3c;">32%</td>
+            <td style="color: #e74c3c;">35%</td>
+            <td style="color: #e74c3c;">28%</td>
+            <td style="color: #e74c3c; font-weight: 700;">15%</td>
+            <td style="color: #e74c3c; font-weight: 700;">8%</td>
+        </tr>
+    </table>
+
+    <div class="grid-2" style="margin-top: 16px;">
+        <div class="alert-box">
+            <strong>NÄƒng lá»±c Yáº¾U NHáº¤T:</strong> Sá»­ dá»¥ng dá»¯ liá»‡u Ä‘Ã¡nh giÃ¡ â€” TB chá»‰ 23.6% Ä‘áº¡t chuáº©n. ChÆ°Æ¡ng trÃ¬nh Ä‘Ã o táº¡o GVMN háº§u nhÆ° khÃ´ng cÃ³ module nÃ y.
+        </div>
+        <div class="info-box">
+            <strong>Khoáº£ng cÃ¡ch:</strong> HÃ  Ná»™i vs. LÃ o Cai chÃªnh lá»‡ch 2-3 láº§n á»Ÿ háº§u háº¿t nÄƒng lá»±c. Cáº§n Æ°u tiÃªn Ä‘áº§u tÆ° vÃ¹ng khÃ³ khÄƒn.
+        </div>
+    </div>
+    <div class="slide-footer">NghiÃªn cá»©u Khoa há»c â€” GDMN Viá»‡t Nam 2024-2026</div>
+    <div class="slide-number">10 / 19</div>
+</div>
+
+<!-- SLIDE 11: Sá»¨C KHá»ŽE TÃ‚M THáº¦N GV -->
+<div class="slide slide-content">
+    <h2>Sá»©c khá»e TÃ¢m tháº§n GVMN â€” BÃ¡o Ä‘á»™ng <span class="tag">4.6 Wellbeing</span></h2>
+    
+    <div class="grid-4">
+        <div class="stat">
+            <div class="num" style="background: linear-gradient(135deg, #e74c3c, #f39c12); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">47.3%</div>
+            <div class="label">Stress cao</div>
+        </div>
+        <div class="stat">
+            <div class="num" style="background: linear-gradient(135deg, #e74c3c, #f39c12); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">31.8%</div>
+            <div class="label">Kiá»‡t sá»©c</div>
+        </div>
+        <div class="stat">
+            <div class="num" style="background: linear-gradient(135deg, #e74c3c, #f39c12); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">22.5%</div>
+            <div class="label">Tráº§m cáº£m nháº¹+</div>
+        </div>
+        <div class="stat">
+            <div class="num" style="background: linear-gradient(135deg, #e74c3c, #f39c12); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">8.2%</div>
+            <div class="label">Dá»± Ä‘á»‹nh nghá»‰ viá»‡c</div>
+        </div>
+    </div>
+
+    <h3>Yáº¿u tá»‘ Dá»± bÃ¡o Kiá»‡t sá»©c (Logistic Regression)</h3>
+    <table class="s-table">
+        <tr>
+            <th>Yáº¿u tá»‘</th>
+            <th>Odds Ratio</th>
+            <th>p-value</th>
+        </tr>
+        <tr><td>SÄ© sá»‘ > 35 tráº»</td><td style="color: #e74c3c; font-weight: 700;">OR = 2.8</td><td>&lt;0.001</td></tr>
+        <tr><td>LÆ°Æ¡ng < 5 triá»‡u/thÃ¡ng</td><td style="color: #e74c3c; font-weight: 700;">OR = 2.1</td><td>&lt;0.001</td></tr>
+        <tr><td>Thiáº¿u há»— trá»£ BGH</td><td style="color: #f39c12; font-weight: 700;">OR = 1.9</td><td>&lt;0.001</td></tr>
+        <tr><td>CÃ³ chuyÃªn gia TL (báº£o vá»‡)</td><td style="color: #2ecc71; font-weight: 700;">OR = 0.45</td><td>&lt;0.001</td></tr>
+    </table>
+
+    <div class="alert-box">
+        <strong>âš ï¸ "GV khÃ´ng thá»ƒ cho Ä‘iá»u mÃ¬nh khÃ´ng cÃ³."</strong> â€” Äáº§u tÆ° sá»©c khá»e tÃ¢m tháº§n GV = Äáº§u tÆ° cháº¥t lÆ°á»£ng giÃ¡o dá»¥c cho tráº».
+    </div>
+    <div class="slide-footer">NghiÃªn cá»©u Khoa há»c â€” GDMN Viá»‡t Nam 2024-2026</div>
+    <div class="slide-number">11 / 19</div>
+</div>
+
+<!-- SLIDE 12: SO SÃNH QUá»C Táº¾ -->
+<div class="slide slide-content">
+    <h2>So sÃ¡nh Quá»‘c táº¿ â€” VN vs. ASEAN & OECD <span class="tag">4.6 Compare</span></h2>
+    
+    <table class="s-table">
+        <tr>
+            <th>Chá»‰ sá»‘</th>
+            <th>ðŸ‡»ðŸ‡³ VN</th>
+            <th>ðŸ‡¸ðŸ‡¬ Singapore</th>
+            <th>ðŸ‡°ðŸ‡· HÃ n Quá»‘c</th>
+            <th>ðŸ‡«ðŸ‡® Pháº§n Lan</th>
+            <th>OECD</th>
+        </tr>
+        <tr><td>GV/tráº»</td><td style="color: #e74c3c;">1:19</td><td>1:12</td><td>1:14</td><td style="color: #2ecc71;">1:7</td><td>1:12</td></tr>
+        <tr><td>ÄH (%)</td><td style="color: #e74c3c;">58%</td><td>92%</td><td>85%</td><td style="color: #2ecc71;">100%</td><td>78%</td></tr>
+        <tr><td>SEL training</td><td style="color: #e74c3c;">31%</td><td>78%</td><td>71%</td><td style="color: #2ecc71;">95%</td><td>62%</td></tr>
+        <tr><td>LÆ°Æ¡ng (%GDP/ng)</td><td style="color: #e74c3c;">68%</td><td>85%</td><td>90%</td><td style="color: #2ecc71;">105%</td><td>88%</td></tr>
+        <tr><td>Giá»/tuáº§n</td><td style="color: #e74c3c;">48</td><td>44</td><td>42</td><td style="color: #2ecc71;">38</td><td>40</td></tr>
+        <tr><td>Burnout</td><td style="color: #e74c3c;">31.8%</td><td>18%</td><td>22%</td><td style="color: #2ecc71;">12%</td><td>20%</td></tr>
+    </table>
+
+    <div class="info-box" style="margin-top: 16px;">
+        <strong>Nháº­n xÃ©t:</strong> VN Ä‘á»©ng cuá»‘i á»Ÿ háº§u háº¿t chá»‰ sá»‘ so vá»›i nhÃ³m so sÃ¡nh. Tuy nhiÃªn, VN cÃ³ lá»£i tháº¿ vÄƒn hÃ³a (collectivism, "cÃ´ giÃ¡o nhÆ° máº¹ hiá»n") â€” náº¿u Ä‘Æ°á»£c Ä‘áº§u tÆ° Ä‘Ãºng má»©c, cÃ³ tiá»m nÄƒng bá»©t phÃ¡.
+    </div>
+    <div class="slide-footer">NghiÃªn cá»©u Khoa há»c â€” GDMN Viá»‡t Nam 2024-2026</div>
+    <div class="slide-number">12 / 19</div>
+</div>
+
+<!-- SLIDE 13: MÃ” HÃŒNH TEACHER-VN -->
+<div class="slide slide-content">
+    <h2>MÃ´ hÃ¬nh TEACHER-VN <span class="tag">4.6 Framework</span></h2>
+    
+    <p style="font-size: 14px; color: rgba(255,255,255,0.6); margin-bottom: 16px;">Transformative Educator Approach for Children's Holistic Emotional Resilience - Vietnam</p>
+    
+    <table class="s-table">
+        <tr>
+            <th style="width: 50px; font-size: 20px;">Chá»¯</th>
+            <th>Trá»¥ cá»™t</th>
+            <th>MÃ´ táº£ Ngáº¯n</th>
+        </tr>
+        <tr>
+            <td style="font-size: 24px; font-weight: 800; color: #e74c3c; text-align: center;">T</td>
+            <td><strong>Trust-building</strong></td>
+            <td>Gáº¯n bÃ³ an toÃ n â€” "CÃ´ quan tÃ¢m Ä‘áº¿n con"</td>
+        </tr>
+        <tr>
+            <td style="font-size: 24px; font-weight: 800; color: #e67e22; text-align: center;">E</td>
+            <td><strong>Environment design</strong></td>
+            <td>"GÃ³c YÃªu ThÆ°Æ¡ng" thay "GÃ³c pháº¡t"</td>
+        </tr>
+        <tr>
+            <td style="font-size: 24px; font-weight: 800; color: #f39c12; text-align: center;">A</td>
+            <td><strong>Active teaching</strong></td>
+            <td>ChÆ°Æ¡ng trÃ¬nh "BÆ°á»›c Nhá» â€” BÆ°á»›c Lá»›n" 24 tuáº§n</td>
+        </tr>
+        <tr>
+            <td style="font-size: 24px; font-weight: 800; color: #27ae60; text-align: center;">C</td>
+            <td><strong>Coaching in context</strong></td>
+            <td>HÆ°á»›ng dáº«n tÃ¬nh huá»‘ng thá»±c, khÃ´ng giáº£i quyáº¿t há»™</td>
+        </tr>
+        <tr>
+            <td style="font-size: 24px; font-weight: 800; color: #2980b9; text-align: center;">H</td>
+            <td><strong>Home partnership</strong></td>
+            <td>Sá»• liÃªn láº¡c tÃ­ch cá»±c + Workshop PH hÃ ng thÃ¡ng</td>
+        </tr>
+        <tr>
+            <td style="font-size: 24px; font-weight: 800; color: #8e44ad; text-align: center;">E</td>
+            <td><strong>Evidence-based</strong></td>
+            <td>Bá»™ cÃ´ng cá»¥ SCSS-VN, quyáº¿t Ä‘á»‹nh dá»±a trÃªn dá»¯ liá»‡u</td>
+        </tr>
+        <tr>
+            <td style="font-size: 24px; font-weight: 800; color: #c0392b; text-align: center;">R</td>
+            <td><strong>Resilience & Self-care</strong></td>
+            <td>"GV khá»e máº¡nh â†’ Tráº» khá»e máº¡nh"</td>
+        </tr>
+    </table>
+    <div class="slide-footer">NghiÃªn cá»©u Khoa há»c â€” GDMN Viá»‡t Nam 2024-2026</div>
+    <div class="slide-number">13 / 19</div>
+</div>
+
+<!-- SLIDE 14: Lá»˜ TRÃŒNH -->
+<div class="slide slide-content">
+    <h2>Lá»™ trÃ¬nh Triá»ƒn khai 3 NÄƒm <span class="tag">Roadmap</span></h2>
+    
+    <div class="flow-h">
+        <div class="flow-box" style="background: linear-gradient(135deg, #e74c3c, #c0392b);">
+            <strong>NÄ‚M 1</strong><br>Ná»€N Táº¢NG<br><small>2026-2027</small>
+        </div>
+        <div class="flow-arr">â†’</div>
+        <div class="flow-box" style="background: linear-gradient(135deg, #f39c12, #e67e22);">
+            <strong>NÄ‚M 2</strong><br>Má»ž Rá»˜NG<br><small>2027-2028</small>
+        </div>
+        <div class="flow-arr">â†’</div>
+        <div class="flow-box" style="background: linear-gradient(135deg, #27ae60, #2ecc71);">
+            <strong>NÄ‚M 3</strong><br>Bá»€N Vá»®NG<br><small>2028-2029</small>
+        </div>
+    </div>
+
+    <div class="grid-3" style="margin-top: 20px;">
+        <div class="gcard" style="border-top: 3px solid #e74c3c;">
+            <h4>NÄƒm 1: Ná»n táº£ng</h4>
+            <ul style="font-size: 13px; color: rgba(255,255,255,0.7);">
+                <li>ÄÃ o táº¡o 10,000 Master Teachers</li>
+                <li>PhÃ¡t triá»ƒn tÃ i liá»‡u TEACHER-VN</li>
+                <li>HoÃ n thiá»‡n SCSS-VN</li>
+                <li>ThÃ­ Ä‘iá»ƒm 200 trÆ°á»ng</li>
+            </ul>
+        </div>
+        <div class="gcard" style="border-top: 3px solid #f39c12;">
+            <h4>NÄƒm 2: Má»Ÿ rá»™ng</h4>
+            <ul style="font-size: 13px; color: rgba(255,255,255,0.7);">
+                <li>ÄÃ o táº¡o lan tá»a â†’ 50,000 GV</li>
+                <li>Má»Ÿ rá»™ng 2,000 trÆ°á»ng</li>
+                <li>Há»‡ thá»‘ng coaching online</li>
+                <li>ÄÃ¡nh giÃ¡ & Ä‘iá»u chá»‰nh</li>
+            </ul>
+        </div>
+        <div class="gcard" style="border-top: 3px solid #27ae60;">
+            <h4>NÄƒm 3: Bá»n vá»¯ng</h4>
+            <ul style="font-size: 13px; color: rgba(255,255,255,0.7);">
+                <li>TÃ­ch há»£p vÃ o Ä‘Ã o táº¡o ÄHSP</li>
+                <li>ChÃ­nh sÃ¡ch há»— trá»£ GV</li>
+                <li>Há»‡ thá»‘ng Ä‘Ã¡nh giÃ¡ quá»‘c gia</li>
+                <li>NghiÃªn cá»©u longitudinal</li>
+            </ul>
+        </div>
+    </div>
+    <div class="slide-footer">NghiÃªn cá»©u Khoa há»c â€” GDMN Viá»‡t Nam 2024-2026</div>
+    <div class="slide-number">14 / 19</div>
+</div>
+
+<!-- SLIDE 15: 5 PHÃT HIá»†N CHÃNH -->
+<div class="slide slide-content">
+    <h2>5 PhÃ¡t hiá»‡n ChÃ­nh <span class="tag">Key Findings</span></h2>
+    
+    <div style="margin-top: 10px;">
+        <div class="success-box" style="margin: 12px 0;">
+            <strong>1ï¸âƒ£ GiÃ¡o viÃªn lÃ  "NhÃ¢n tá»‘ NhÃ¢n Ä‘Ã´i"</strong> â€” Î² = 0.42 (máº¡nh nháº¥t), vá»«a trá»±c tiáº¿p thÃºc Ä‘áº©y HVTC vá»«a nÃ¢ng cao cháº¥t lÆ°á»£ng MT lá»›p há»c (r = 0.58). Äáº§u tÆ° cho GV = hiá»‡u á»©ng kÃ©p.
+        </div>
+        <div class="success-box" style="margin: 12px 0;">
+            <strong>2ï¸âƒ£ PBIS-VN hiá»‡u quáº£ cao</strong> â€” +34.7% hÃ nh vi tÃ­ch cá»±c sau 6 thÃ¡ng, d = 1.14 (effect size lá»›n). TrÃ² chÆ¡i dÃ¢n gian VN + giÃ¡ trá»‹ cá»™ng Ä‘á»“ng tÄƒng hiá»‡u quáº£.
+        </div>
+        <div class="alert-box" style="margin: 12px 0;">
+            <strong>3ï¸âƒ£ Khoáº£ng cÃ¡ch vÃ¹ng miá»n Ä‘Ã¡ng bÃ¡o Ä‘á»™ng</strong> â€” Cháº¥t lÆ°á»£ng GDMN miá»n nÃºi tháº¥p hÆ¡n 2-3 láº§n thÃ nh thá»‹. GV LÃ o Cai: 8% Ä‘áº¡t chuáº©n dá»¯ liá»‡u Ä‘Ã¡nh giÃ¡.
+        </div>
+        <div class="alert-box" style="margin: 12px 0;">
+            <strong>4ï¸âƒ£ Khá»§ng hoáº£ng sá»©c khá»e tÃ¢m tháº§n GV</strong> â€” 47.3% stress cao, 31.8% kiá»‡t sá»©c. SÄ© sá»‘ Ä‘Ã´ng (OR=2.8) vÃ  lÆ°Æ¡ng tháº¥p (OR=2.1) lÃ  nguyÃªn nhÃ¢n chÃ­nh.
+        </div>
+        <div class="info-box" style="margin: 12px 0;">
+            <strong>5ï¸âƒ£ VÄƒn hÃ³a VN lÃ  lá»£i tháº¿</strong> â€” Collectivism (IDV=20), "TiÃªn há»c lá»…", Nho giÃ¡o khi Ä‘Æ°á»£c diá»…n giáº£i tÃ­ch cá»±c â†’ ná»n táº£ng vá»¯ng cho giÃ¡o dá»¥c hÃ nh vi tÃ­ch cá»±c.
+        </div>
+    </div>
+    <div class="slide-footer">NghiÃªn cá»©u Khoa há»c â€” GDMN Viá»‡t Nam 2024-2026</div>
+    <div class="slide-number">15 / 19</div>
+</div>
+
+<!-- SLIDE 16: Há»† SINH THÃI Há»ŒC Táº¬P SÃNG Táº O -->
+<div class="slide slide-content" style="background: linear-gradient(135deg, #1a2a3a, #2c3e50);">
+    <h2>MÃ´ hÃ¬nh Há»‡ sinh thÃ¡i Há»c táº­p SÃ¡ng táº¡o cho MN <span class="tag">Ecosystem</span></h2>
+    <p style="font-size: 13px; color: rgba(255,255,255,0.6); margin-bottom: 16px;">Äáº·ng Lan PhÆ°Æ¡ng, Äáº·ng Ãšt PhÆ°á»£ng & Äinh Lan Anh (2024) â€” ÄH Thá»§ Ä‘Ã´ HÃ  Ná»™i</p>
+    
+    <div class="grid-3" style="grid-template-columns: 1fr 1fr 1fr 1fr 1fr; gap: 10px;">
+        <div class="gcard" style="border-top: 3px solid #e74c3c;">
+            <h4 style="font-size:13px;">ðŸ‘¶ Chá»§ thá»ƒ</h4>
+            <p style="font-size:11px; color:rgba(255,255,255,0.6);">Tráº» â€” GV â€” PH â€” CBQL â€” CÄ</p>
+            <p style="font-size:18px; color:#e74c3c; font-weight:700;">78%</p>
+            <p style="font-size:10px; color:rgba(255,255,255,0.4);">Má»©c Ä‘áº¡t HN</p>
+        </div>
+        <div class="gcard" style="border-top: 3px solid #3498db;">
+            <h4 style="font-size:13px;">ðŸ“š Tri thá»©c</h4>
+            <p style="font-size:11px; color:rgba(255,255,255,0.6);">CT GDMN 2021, tÃ i liá»‡u</p>
+            <p style="font-size:18px; color:#3498db; font-weight:700;">82%</p>
+            <p style="font-size:10px; color:rgba(255,255,255,0.4);">Má»©c Ä‘áº¡t HN</p>
+        </div>
+        <div class="gcard" style="border-top: 3px solid #f39c12;">
+            <h4 style="font-size:13px;">ðŸ’» CÃ´ng nghá»‡</h4>
+            <p style="font-size:11px; color:rgba(255,255,255,0.6);">PP, cÃ´ng cá»¥ sá»‘, gamification</p>
+            <p style="font-size:18px; color:#f39c12; font-weight:700;">45%</p>
+            <p style="font-size:10px; color:rgba(255,255,255,0.4);">Má»©c Ä‘áº¡t HN</p>
+        </div>
+        <div class="gcard" style="border-top: 3px solid #2ecc71;">
+            <h4 style="font-size:13px;">ðŸ  Bá»‘i cáº£nh</h4>
+            <p style="font-size:11px; color:rgba(255,255,255,0.6);">Lá»›p â€” TrÆ°á»ng â€” GÄ â€” CÄ</p>
+            <p style="font-size:18px; color:#2ecc71; font-weight:700;">62%</p>
+            <p style="font-size:10px; color:rgba(255,255,255,0.4);">Má»©c Ä‘áº¡t HN</p>
+        </div>
+        <div class="gcard" style="border-top: 3px solid #9b59b6;">
+            <h4 style="font-size:13px;">ðŸŒŸ VÄƒn hÃ³a/CL</h4>
+            <p style="font-size:11px; color:rgba(255,255,255,0.6);">GiÃ¡ trá»‹, chÃ­nh sÃ¡ch, káº¿t ná»‘i</p>
+            <p style="font-size:18px; color:#9b59b6; font-weight:700;">55%</p>
+            <p style="font-size:10px; color:rgba(255,255,255,0.4);">Má»©c Ä‘áº¡t HN</p>
+        </div>
+    </div>
+
+    <div class="slide-quote" style="margin-top: 20px; border-left-color: #3498db;">
+        "Há»‡ sinh thÃ¡i há»c táº­p bao gá»“m cáº£ cÃ¡c thÃ nh pháº§n sá»‘ng vÃ  phi sá»‘ng, liÃªn káº¿t cháº·t cháº½ trong má»™t há»‡ thá»‘ng â€” sá»± thay Ä‘á»•i báº¥t ká»³ thÃ nh pháº§n nÃ o cÅ©ng áº£nh hÆ°á»Ÿng Ä‘áº¿n toÃ n bá»™."
+    </div>
+
+    <div style="text-align:center; margin-top:12px;">
+        <p style="font-size:12px; color:rgba(255,255,255,0.5);">QÄ 4906/QÄ-UBND HÃ  Ná»™i (2022) â€¢ TB há»‡ thá»‘ng HÃ  Ná»™i: 64.4% â€¢ Cáº£ nÆ°á»›c: ~43%</p>
+    </div>
+    <div class="slide-footer">NghiÃªn cá»©u Khoa há»c â€” GDMN Viá»‡t Nam 2024-2026</div>
+    <div class="slide-number">16 / 19</div>
+</div>
+
+<!-- SLIDE 17: XÃƒ Há»˜I Há»ŒC GIA ÄÃŒNH & XHH TRáºº EM -->
+<div class="slide slide-content" style="background: linear-gradient(135deg, #1a2a3a, #2c3e50);">
+    <h2>XÃ£ há»™i há»c Gia Ä‘Ã¬nh & XÃ£ há»™i hÃ³a Tráº» em <span class="tag">Sociology</span></h2>
+    <p style="font-size: 13px; color: rgba(255,255,255,0.6); margin-bottom: 16px;">GiÃ¡o trÃ¬nh XHHGD â€” Há»c viá»‡n BÃ¡o chÃ­ vÃ  TuyÃªn truyá»n (2022)</p>
+    
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+        <div class="gcard" style="border-left: 3px solid #2980b9;">
+            <h4>ðŸ›ï¸ Gia Ä‘Ã¬nh = Thiáº¿t cháº¿ XH</h4>
+            <ul style="font-size: 11px; color: rgba(255,255,255,0.7); margin-left: 14px;">
+                <li>Tá»• chá»©c theo luáº­t phÃ¡p, phong tá»¥c, Ä‘áº¡o Ä‘á»©c</li>
+                <li>Chá»©c nÄƒng: Sinh sáº£n, Kinh táº¿, GiÃ¡o dá»¥c, XHH, TÃ¬nh cáº£m</li>
+                <li>UNESCO: "nhÃ³m ngÆ°á»i cÃ³ quan há»‡ há» hÃ ng, cÃ¹ng sá»‘ng chung"</li>
+            </ul>
+        </div>
+        <div class="gcard" style="border-left: 3px solid #e74c3c;">
+            <h4>ðŸ’– Gia Ä‘Ã¬nh = NhÃ³m TÃ¢m lÃ½-TÃ¬nh cáº£m</h4>
+            <ul style="font-size: 11px; color: rgba(255,255,255,0.7); margin-left: 14px;">
+                <li>Gáº¯n káº¿t bá»Ÿi tÃ¬nh yÃªu, quan tÃ¢m, sáº» chia</li>
+                <li>Ná»n táº£ng "gáº¯n bÃ³ an toÃ n" (Bowlby)</li>
+                <li>Cáº£m giÃ¡c an toÃ n â†’ HÃ nh vi tÃ­ch cá»±c</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 16px;">
+        <div style="background:rgba(255,255,255,0.05); padding:14px; border-radius:8px; text-align:center;">
+            <p style="font-size:24px; font-weight:800; color:#e74c3c;">38%</p>
+            <p style="font-size:10px; color:rgba(255,255,255,0.5);">GÄ 3 tháº¿ há»‡</p>
+        </div>
+        <div style="background:rgba(255,255,255,0.05); padding:14px; border-radius:8px; text-align:center;">
+            <p style="font-size:24px; font-weight:800; color:#3498db;">62%</p>
+            <p style="font-size:10px; color:rgba(255,255,255,0.5);">GÄ háº¡t nhÃ¢n</p>
+        </div>
+        <div style="background:rgba(255,255,255,0.05); padding:14px; border-radius:8px; text-align:center;">
+            <p style="font-size:24px; font-weight:800; color:#f39c12;">23%</p>
+            <p style="font-size:10px; color:rgba(255,255,255,0.5);">Bá»‘/máº¹ Ä‘i xa (NT)</p>
+        </div>
+        <div style="background:rgba(255,255,255,0.05); padding:14px; border-radius:8px; text-align:center;">
+            <p style="font-size:24px; font-weight:800; color:#2ecc71;">4.5x</p>
+            <p style="font-size:10px; color:rgba(255,255,255,0.5);">Phá»©c táº¡p XHHâ†‘</p>
+        </div>
+    </div>
+
+    <div class="slide-quote" style="margin-top: 14px; border-left-color: #f39c12; font-size: 12px;">
+        "XHH tráº» em ngÃ y nay phá»©c táº¡p hÆ¡n gáº¥p nhiá»u láº§n khi gia Ä‘Ã¬nh chia sáº» vai trÃ² vá»›i nhÃ  trÆ°á»ng, truyá»n thÃ´ng, Internet â€” má»©c Ä‘á»™ tá»± láº­p tÆ°Æ¡ng Ä‘á»‘i cá»§a gia Ä‘Ã¬nh so vá»›i xÃ£ há»™i ngÃ y cÃ ng tÄƒng."
+    </div>
+    <div class="slide-footer">NghiÃªn cá»©u Khoa há»c â€” GDMN Viá»‡t Nam 2024-2026</div>
+    <div class="slide-number">17 / 19</div>
+</div>
+
+<!-- SLIDE 18: BIá»†N PHÃP QUáº¢N LÃ -->
+<div class="slide slide-content" style="background: linear-gradient(135deg, #1a2a3a, #2c3e50);">
+    <h2>5 Biá»‡n phÃ¡p Quáº£n lÃ½ ND-CS Tráº» MN <span class="tag">Management</span></h2>
+    <p style="font-size: 13px; color: rgba(255,255,255,0.6); margin-bottom: 14px;">HoÃ ng Thá»‹ NhÃ£n (2021) â€” TrÆ°á»ng MN CÃ´ng láº­p Quáº­n 1, TP.HCM</p>
+    
+    <div style="display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap;">
+        <div style="flex:1; min-width:120px; background:rgba(231,76,60,0.15); border:1px solid rgba(231,76,60,0.3); border-radius:8px; padding:12px; text-align:center;">
+            <p style="font-size:12px; font-weight:700; color:#e74c3c;">â‘  NHáº¬N THá»¨C</p>
+            <p style="font-size:10px; color:rgba(255,255,255,0.5);">CBQL-GV-NV-PH</p>
+            <p style="font-size:14px; font-weight:700; color:rgba(255,255,255,0.8);">4.2 / 4.7</p>
+        </div>
+        <div style="flex:1; min-width:120px; background:rgba(243,156,18,0.15); border:1px solid rgba(243,156,18,0.3); border-radius:8px; padding:12px; text-align:center;">
+            <p style="font-size:12px; font-weight:700; color:#f39c12;">â‘¡ Káº¾ HOáº CH</p>
+            <p style="font-size:10px; color:rgba(255,255,255,0.5);">Theo Chuáº©n PT</p>
+            <p style="font-size:14px; font-weight:700; color:rgba(255,255,255,0.8);">3.8 / 4.5</p>
+        </div>
+        <div style="flex:1; min-width:120px; background:rgba(39,174,96,0.15); border:1px solid rgba(39,174,96,0.3); border-radius:8px; padding:12px; text-align:center;">
+            <p style="font-size:12px; font-weight:700; color:#27ae60;">â‘¢ Tá»” CHá»¨C</p>
+            <p style="font-size:10px; color:rgba(255,255,255,0.5);">Chá»‰ Ä‘áº¡o TH</p>
+            <p style="font-size:14px; font-weight:700; color:rgba(255,255,255,0.8);">3.6 / 4.6</p>
+        </div>
+        <div style="flex:1; min-width:120px; background:rgba(41,128,185,0.15); border:1px solid rgba(41,128,185,0.3); border-radius:8px; padding:12px; text-align:center;">
+            <p style="font-size:12px; font-weight:700; color:#2980b9;">â‘£ ÄÃNH GIÃ</p>
+            <p style="font-size:10px; color:rgba(255,255,255,0.5);">Kiá»ƒm tra ÄK</p>
+            <p style="font-size:14px; font-weight:700; color:rgba(255,255,255,0.8);">3.5 / 4.4</p>
+        </div>
+        <div style="flex:1; min-width:120px; background:rgba(142,68,173,0.15); border:1px solid rgba(142,68,173,0.3); border-radius:8px; padding:12px; text-align:center;">
+            <p style="font-size:12px; font-weight:700; color:#8e44ad;">â‘¤ PHá»I Há»¢P</p>
+            <p style="font-size:10px; color:rgba(255,255,255,0.5);">GÄ â€” CÄ</p>
+            <p style="font-size:14px; font-weight:700; color:rgba(255,255,255,0.8);">3.4 / 4.3</p>
+        </div>
+    </div>
+
+    <div style="background:rgba(255,255,255,0.05); border-radius:10px; padding:14px; margin-top:8px;">
+        <p style="font-size:12px; color:rgba(255,255,255,0.7); text-align:center;"><strong style="color:#e74c3c;">Gap trung bÃ¬nh: -0.8 Ä‘iá»ƒm</strong> giá»¯a "Kháº£ thi" (3.7) vÃ  "Cáº§n thiáº¿t" (4.5)</p>
+        <p style="font-size:11px; color:rgba(255,255,255,0.5); text-align:center; margin-top:6px;">NQ 29-NQ/TW (2013) â€¢ Luáº­t GD 2019 â€¢ TT 52/2020/TT-BGDÄT â€¢ TT 13/2018/BLÄTBXH</p>
+    </div>
+
+    <div class="slide-quote" style="margin-top: 12px; border-left-color: #e74c3c; font-size:12px;">
+        TÃ­ch há»£p 5 biá»‡n phÃ¡p QL vÃ o PBIS-VN: Nháº­n thá»©c â†’ Láº­p KH â†’ Tá»• chá»©c 3 táº§ng â†’ ÄÃ¡nh giÃ¡ dá»¯ liá»‡u â†’ Phá»‘i há»£p GÄ-CÄ
+    </div>
+    <div class="slide-footer">NghiÃªn cá»©u Khoa há»c â€” GDMN Viá»‡t Nam 2024-2026</div>
+    <div class="slide-number">18 / 19</div>
+</div>
+
+<!-- SLIDE 19: KHUYáº¾N NGHá»Š -->
+<div class="slide slide-content" style="background: linear-gradient(135deg, #0d1b2a, #1a5276);">
+    <h2>Khuyáº¿n nghá»‹ HÃ nh Ä‘á»™ng <span class="tag">Action</span></h2>
+    
+    <div class="grid-3">
+        <div class="gcard" style="border-top: 3px solid #e74c3c;">
+            <h4>ðŸ›ï¸ ChÃ­nh sÃ¡ch</h4>
+            <ul style="font-size: 12px; color: rgba(255,255,255,0.7); margin-left: 14px;">
+                <li>Giáº£m sÄ© sá»‘ â‰¤ 25 tráº»/lá»›p</li>
+                <li>TÄƒng lÆ°Æ¡ng GVMN â‰¥ 100% GDP/ng</li>
+                <li>6 tÃ­n chá»‰ SEL trong Ä‘Ã o táº¡o GVMN</li>
+                <li>Chuáº©n hÃ³a SCSS-VN toÃ n quá»‘c</li>
+                <li>Triá»ƒn khai PBIS-VN quá»‘c gia</li>
+            </ul>
+        </div>
+        <div class="gcard" style="border-top: 3px solid #f39c12;">
+            <h4>ðŸ« NhÃ  trÆ°á»ng</h4>
+            <ul style="font-size: 12px; color: rgba(255,255,255,0.7); margin-left: 14px;">
+                <li>Ãp dá»¥ng TEACHER-VN</li>
+                <li>PLC vá» hÃ nh vi tÃ­ch cá»±c</li>
+                <li>"GÃ³c YÃªu ThÆ°Æ¡ng" thay "GÃ³c pháº¡t"</li>
+                <li>"Sá»• liÃªn láº¡c tÃ­ch cá»±c" hÃ ng ngÃ y</li>
+                <li>Workshop PH hÃ ng thÃ¡ng</li>
+            </ul>
+        </div>
+        <div class="gcard" style="border-top: 3px solid #27ae60;">
+            <h4>ðŸ‘©â€ðŸ« GiÃ¡o viÃªn</h4>
+            <ul style="font-size: 12px; color: rgba(255,255,255,0.7); margin-left: 14px;">
+                <li>TÆ° duy: "Há»— trá»£" thay "Quáº£n lÃ½"</li>
+                <li>Tá»· lá»‡ khen/nháº¯c â‰¥ 4:1</li>
+                <li>Quan sÃ¡t ghi chÃ©p 5 phÃºt/ngÃ y</li>
+                <li>Mindfulness 5 phÃºt/ngÃ y</li>
+                <li>Táº­p huáº¥n â‰¥ 40 giá»/nÄƒm</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="slide-quote" style="margin-top: 24px; border-left-color: #2ecc71;">
+        "Äáº§u tÆ° cho giÃ¡o viÃªn máº§m non lÃ  Ä‘áº§u tÆ° cho tháº¿ há»‡ tÆ°Æ¡ng lai. Má»™t giÃ¡o viÃªn háº¡nh phÃºc táº¡o ra má»™t lá»›p há»c háº¡nh phÃºc, vÃ  má»™t lá»›p há»c háº¡nh phÃºc nuÃ´i dÆ°á»¡ng nhá»¯ng Ä‘á»©a tráº» háº¡nh phÃºc."
+    </div>
+    
+    <div style="text-align: center; margin-top: 20px;">
+        <p style="font-size: 14px; color: rgba(255,255,255,0.6);">Cáº£m Æ¡n Ä‘Ã£ láº¯ng nghe!</p>
+        <p style="font-size: 12px; color: rgba(255,255,255,0.3);">NghiÃªn cá»©u Khoa há»c â€” Má»¥c 4.5 & 4.6 â€” GiÃ¡o dá»¥c Máº§m non Viá»‡t Nam 2024-2026</p>
+    </div>
+    <div class="slide-footer">NghiÃªn cá»©u Khoa há»c â€” GDMN Viá»‡t Nam 2024-2026</div>
+    <div class="slide-number">19 / 19</div>
+</div>
+
+</body>
+</html>
